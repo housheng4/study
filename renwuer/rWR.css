@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-size: 62.5%;
+}
+.arrow {
+    width: 100%;
+    height: 7.4em;
+    background-color: #66cccc;
+    float: left;
+}
+
+.ptt {
+    width: 100%;
+    height: 603px;
+    background-color: #66cccc;
+    float: left;
+    text-align:center;
+    padding-top: 40px;   
+}
+.article2 {
+    width: 50%;
+    height: 235px;
+    background-color: #66cccc;
+    float: left;
+    text-align: center;
+}
+.article3 {
+    width: 50%;
+    height: 235px;
+    background-color: #66cccc;
+    float: left;
+    text-align: center;
+}
+.t1 {
+    width: 54px;
+    height: 54px;
+    margin-left: 3.5em;
+    margin-top: 2em;
+}
+.jt{
+    width: 30px;
+    height: 30px;
+}
+.t2box {
+    width: 18.1em;
+    height: 7em;
+    margin:auto;
+}
+.logo{
+width: 57%;
+margin: 0 auto;
+}
+.t3 {
+    width: 8.8em;
+    height: 8.8em;
+    margin: auto;
+}
+.t4 {
+    width: 8.4em;
+    height: 8.4em;
+    margin: auto;
+}
+.tip1{
+    display: block;
+    margin-top: 121px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+.tip2{
+    color: #fff;
+    font-size: 24px;
+}
+.tip3{
+    color:#fff; 
+    font-size: 24px;
+}
+.img {
+    width: 100%;
+    height:100%;    
+}

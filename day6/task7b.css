@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0%;
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+      font-size: 35.5% !important;
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    html {
+      font-size: 62.5% !important;
+    }
+  }
+  @media only screen and (min-width: 2560px) {
+    html {
+      font-size: 62.5% !important;
+    }
+  }
+  
+  html {
+      font-size: 62.5%;
+  }
+    /* 媒体查询 */
+.header {
+    width: 100%;
+    height:10rem;
+    background-color: #29bde0;
+    position: relative;
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid #74d4eb;
+}
+.logo1 {
+    width: 5rem;
+    height: 4rem;
+    background-image: url(./css_sprites2.png);
+    background-position: -84px -238px;
+}
+.logo2 {
+    width: 5rem;
+    height: 5rem;
+    background-image: url(./css_sprites2.png);
+    background-position: -150px -230px;
+}
+.logo3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image2 {
+    height: 20rem;
+}
+img {
+    max-width: 100%;
+}
+.evaluate {
+    font-size: 3rem;
+    color: #ffc865;
+    margin-top: 2rem;
+}
+.statistics {
+    font-size: 2rem;
+    color: #fff;
+   
+    margin-top: 2rem;
+}
+.row1 {
+    background-color: #29bde0;
+}
+.day {
+    font-size: 3rem;
+}
+.time {
+    font-size: 2rem;
+}
+.day1,.day2,.day3{
+    border-bottom: 1px solid #dddddd;
+}
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: #74d4eb;
+    position: fixed;
+    bottom: 0;
+    /* filter:alpha(opacity:30); 针对IE加这个 */
+    opacity:0.8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+a {
+    width: 40%;
+    height: 80%;
+}
+.button1 {
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    background-color: #f66f6f;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+.button2 {
+    width: 40%;
+    height: 80%;
+    font-size: 3rem;
+    background-color: #fbb435;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}

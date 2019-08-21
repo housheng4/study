@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* html {
+    font-size: 62.5%;
+} */
+@media only screen and (min-width: 320px) {
+    html {
+      font-size: 35.5% !important;
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    html {
+      font-size: 62.5% !important;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    html {
+      font-size: 62.5% !important;
+    }
+  }
+  
+  html {
+      font-size: 62.5%;
+  }
+
+  #test {
+      font-size: 1.6rem;
+  }
+  /* 媒体查询 */
+.myheader {
+    width: 100%;
+    height:10rem;
+    background-color: #29bde0;
+    position: relative;
+}
+.img1 {
+    width: 4.3rem;
+    height: 4.3rem;
+    background-image: url(./css_sprites2.png);
+    background-position: -213px -235px;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+.a0 {
+    padding: 1rem 2rem 0 2rem;
+}
+.a1 {
+    text-align: center;
+    /* color: #fbb435; */
+    border: 1px solid #cecece;
+    margin: 1rem;
+    line-height: 300%;  
+    font-size: 3rem;
+    position: relative;
+}
+.img2 {
+    width:2.5rem;
+    height: 4.2rem;
+    background-image: url(./css_sprites2.png);
+    background-position: -382px -85px;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    margin-top: -2rem;
+}
+.a1,.a2,.a3,.a4,.a5{
+    text-align: center;
+    font-size: 3rem;
+}
+.p {
+    font-size: 2.5rem;
+}
+.a2 {
+    text-align: center;
+    border: 1px solid #cecece;
+    margin: 1rem;
+    line-height: 300%;  
+    font-size: 3rem;
+    position: relative;
+}
+.a3 {
+    border-bottom:1px solid #fbb435 ;
+    color: #fbb435;
+}
+.b1 {
+    width: 70%;
+    height: 10rem;
+    margin-top: 3rem;
+    background-color: #69d1e9;
+    border: none;
+}
+.b2,.b3 {
+    width: 70%;
+    height: 10rem;
+    background-color: #69d1e9;
+    border: none;
+}
+button {
+    color: #fff;
+}
+.img3 {
+    display: inline-block;
+    width: 3rem;
+    height: 5.6rem;
+    background-image: url(./css_sprites2.png);
+    background-position:-382px -10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    right: 0.5rem;
+    margin-top: -1.3rem;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo1 {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #69d1e9;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+.logo2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
