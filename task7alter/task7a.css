@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 62.5%;
+    background-color: #f0f0f0;
+  }
+.myheader {
+    width: 100%;
+    height:10rem;
+    background-color: #29bde0;
+    position: relative;
+}
+.img1 {
+    width: 4.3rem;
+    height: 4.3rem;
+    background-image: url(./css_sprites2.png);
+    background-position: -272px -235px;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+.container {
+    padding: 0 3.7rem;
+}
+.a0 {
+    margin: 0;
+    width: 100%;
+}
+.a1>span {
+    font-size: 3.4rem;
+}
+.a1 {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    color: #9a9a9a;
+    border: 1px solid #cbcbcb;
+    margin: 2.7rem 0;
+    height: 11.7rem;
+    line-height: 11.7rem;
+    font-size: 3.48rem;
+    position: relative;
+}
+.img2 {
+    width:2.5rem;
+    height: 4.2rem;
+    background-image: url(./css_sprites2.png);
+    background-position: -382px -85px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -2.1rem;
+}
+.p1, .p2 {
+    font-size: 2.5rem;
+    color: #9a9a9a;
+    line-height: 8.2rem;
+}
+.p3 {
+    font-size: 2.5rem;
+    color: #9a9a9a;
+    margin-top: 2.5rem;
+}
+.a2 {
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    
+    height: 78.6rem;  
+    font-size: 3rem;
+}
+.a3 {
+    border-bottom:1px solid #fbb435 ;
+    color: #fbb435;
+    background-color: #fff;
+    font-size: 3.774rem;
+    height: 9.3rem;
+    line-height: 9.3rem;
+}
+.b1 {
+    width: 82%;
+    height: 13.6rem;
+    margin-top: 3.3rem;
+    background-color: #69d1e9;
+    border: none;
+}
+.b2,.b3 {
+    width: 82%;
+    height: 13.6rem;
+    background-color: #69d1e9;
+    border: none;
+}
+button {
+    color: #fff;
+}
+.a5 {
+    position: relative;
+}
+.img3 {
+    width: 3rem;
+    height: 5.6rem;
+    background-image: url(./css_sprites2.png);
+    background-position:-382px -10px;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -2.8rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+.logo2:hover {
+    background-color: #69d1e9;
+}
+
+@media all and (max-width:520px) {
+    html {
+        font-size: 40%;
+    }
+    .b1 ,.b2 ,.b3 {
+        width: 70%;
+    }
+    .a1>span {
+        font-size: 2.5rem;
+    }
+}
