@@ -61,7 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-right: -38px;
+    margin-right: -41px;
    
 }
 .a1 {
@@ -146,10 +146,14 @@ ul {
 }
 .box1img {
     width: 40%;
-    height: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 img {
     max-width: 100%;
+    height: 90%;
 }
 .box1word {
     width: 60%;
@@ -238,9 +242,7 @@ img {
     height: 10rem;
     /* line-height: 3.1rem; */
     border-bottom:1px solid #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    
 }
 .salary {
     float: right;
@@ -249,8 +251,15 @@ img {
 .box4salary1, .box4salary2 {
     border-bottom: 1px solid #000;
 }
+.box4salary3 {
+    border-bottom: 1px solid #fff;
+}
 .box4salary1, .box4salary2, .box4salary3 {
-    padding: 1%;
+    padding: 0 3.5%;
+    height: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .colbox5 {
     height: 5rem;
@@ -270,7 +279,7 @@ img {
 
 .footer {
     width: 100%;
-    height: 2 1rem;
+    height: 16rem;
     background-color: #29b078;
     color: #fff;
     font-size: 1.4rem;
@@ -295,14 +304,17 @@ img {
 .footbox10 {
     font-size: 1.2rem;   
     text-align: center;
+    background-color: #29b078;
+    border-top: 1px solid #32c086;
+    color: #fff;
 }
 .footercol {
-    text-align: center;
+    /* text-align: center; */
     padding: 0;
 }
 .QRcode {
-    max-width: 9rem;
-    max-height: 9rem;
+    max-width: 8.5rem;
+    /* max-height: 9rem; */
 } 
 .cole {
     border: none;
