@@ -112,7 +112,7 @@ a:hover .border {
 }
 .right-thing {
     width: 72%;
-    height: 100rem;
+    padding-bottom: 10rem;
     background-color: #fff;
     margin-bottom: 10rem;
 }
