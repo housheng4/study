@@ -64,7 +64,7 @@ button {
   color: #eff0f4;
 }
 .bd .line1 .phone {
-  width: 16%;
+  width: 116px;
   text-align: center;
   border-right: 2px solid #eff0f4;
 }
@@ -89,7 +89,7 @@ button {
   margin-top: 15px;
 }
 .bd .line2 .phone {
-  width: 16%;
+  width: 116px;
   text-align: center;
   border-right: 2px solid #eff0f4;
 }
@@ -106,7 +106,7 @@ button {
   color: #eff0f4;
 }
 .bd .line2 .suo {
-  width: 16%;
+  width: 116px;
   text-align: center;
   border-right: 2px solid #eff0f4;
 }
