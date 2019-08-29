@@ -1,0 +1,267 @@
+@charset "utf-8";
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.fontsize2 {
+  font-size: 3.2rem;
+}
+.btn {
+  position: fixed;
+  width: 42%;
+  height: 90px;
+  bottom: 40px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 3.4rem;
+  border: 2px solid #5fc0cd;
+}
+.head {
+  background-color: #5fc0cd;
+  width: 100%;
+  line-height: 80px;
+  text-align: center;
+}
+.head .return {
+  float: left;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.head .title1 {
+  font-size: 3.6rem;
+  color: #fff;
+  margin-left: -30px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.introduce {
+  width: 100%;
+  background: url(img/bg.png) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+}
+.introduce .women {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-left: 30px;
+  width: 23.47%;
+}
+.introduce .women img {
+  width: 100%;
+  max-width: 169px;
+}
+.introduce .guy {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.introduce .guy .name {
+  font-size: 3.6rem;
+  color: #fff;
+}
+.introduce .guy .age {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-left: 30px;
+}
+.introduce .bj {
+  margin-left: 30px;
+}
+.introduce .bj .adress {
+  font-size: 2.4rem;
+  color: #fff;
+}
+.line1 {
+  width: 100%;
+  height: 10rem;
+  border-bottom: 1px solid #e1e5e7;
+}
+.line1 .zyjn {
+  font-size: 3.2rem;
+  line-height: 10rem;
+  margin-left: 28px;
+  color: #333;
+}
+.line1 .shu {
+  display: inline-block;
+  width: 30px;
+  height: 26px;
+  border-right: 2px solid #5fc0cd;
+}
+.line2 {
+  line-height: 100px;
+  margin-left: 30px;
+}
+.line2 .line2img1 {
+  margin-left: 30px;
+  max-width: 25px;
+}
+.line2 span {
+  font-size: 3.2rem;
+  color: #333;
+}
+.line2 .line2img2 {
+  padding-left: 17px;
+  border-left: 1px solid #e1e5e7;
+  margin-left: 20px;
+}
+.line3 {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  border-top: 1px solid #e1e5e7;
+  border-bottom: 1px solid #e1e5e7;
+}
+.line3 span {
+  font-size: 3.2rem;
+  color: #999;
+}
+.line3 .cynx {
+  margin-left: 30px;
+  line-height: 10rem;
+}
+.line3 .year1 {
+  padding-left: 28px;
+  color: #000;
+}
+.line3 .shu2 {
+  display: inline-block;
+  width: 25px;
+  height: 28px;
+  border-right: 1px solid #e1e5e7;
+  flex-shrink: 0;
+}
+.line4 {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  border-top: 1px solid #e1e5e7;
+  border-bottom: 1px solid #e1e5e7;
+}
+.line4 span {
+  font-size: 3.2rem;
+  color: #999;
+}
+.line4 .cynx {
+  margin-left: 30px;
+  line-height: 10rem;
+}
+.line4 .year1 {
+  padding-left: 28px;
+  color: #000;
+}
+.line4 .shu2 {
+  display: inline-block;
+  width: 25px;
+  height: 28px;
+  border-right: 1px solid #e1e5e7;
+  flex-shrink: 0;
+}
+.line5 {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  border-top: 1px solid #e1e5e7;
+  border-bottom: 1px solid #e1e5e7;
+}
+.line5 span {
+  font-size: 3.2rem;
+  color: #999;
+}
+.line5 .cynx {
+  margin-left: 30px;
+  line-height: 10rem;
+}
+.line5 .year1 {
+  padding-left: 28px;
+  color: #000;
+}
+.line5 .shu2 {
+  display: inline-block;
+  width: 25px;
+  height: 28px;
+  border-right: 1px solid #e1e5e7;
+  flex-shrink: 0;
+}
+.line5 .year1 {
+  color: #e26163;
+}
+.line6 {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  border-top: 1px solid #e1e5e7;
+  border-bottom: 1px solid #e1e5e7;
+  height: auto;
+  margin-bottom: 226px;
+  margin-left: 0;
+  padding-left: 30px;
+  border-top: none;
+}
+.line6 span {
+  font-size: 3.2rem;
+  color: #999;
+}
+.line6 .cynx {
+  margin-left: 30px;
+  line-height: 10rem;
+}
+.line6 .year1 {
+  padding-left: 28px;
+  color: #000;
+}
+.line6 .shu2 {
+  display: inline-block;
+  width: 25px;
+  height: 28px;
+  border-right: 1px solid #e1e5e7;
+  flex-shrink: 0;
+}
+.line6 .year1 {
+  font-size: 2.8rem;
+  color: #000;
+}
+.cynx {
+  white-space: nowrap;
+}
+.btn1 {
+  position: fixed;
+  width: 42%;
+  height: 90px;
+  bottom: 40px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 3.4rem;
+  border: 2px solid #5fc0cd;
+  left: 40px;
+  color: #5fc0cd;
+  background-color: #fff;
+}
+.btn2 {
+  position: fixed;
+  width: 42%;
+  height: 90px;
+  bottom: 40px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 3.4rem;
+  border: 2px solid #5fc0cd;
+  right: 40px;
+  background-color: #5fc0cd;
+  color: #fff;
+}
+@media all and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+  .btn1,
+  .btn2 {
+    width: 30%;
+    height: 70px;
+  }
+}

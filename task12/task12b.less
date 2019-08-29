@@ -1,0 +1,219 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+@bg_color:#5fc0cd;   
+@colorhui:#afbac0;
+@borderxian: 1px solid #e2eaec;
+
+html {
+    font-size: 62.5%;
+}
+.flex1 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex2 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.clearstyle {
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+.pa {
+    position: absolute;
+}
+.pr {
+    position: relative;
+}
+.pf {
+    position: fixed;
+}
+.btnstyle {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    white-space: nowrap;
+}
+.fontz {
+    font-size: 2.8rem;
+}
+.overf {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+header {
+    width: 100%;
+    height: 80px;
+    .pr;
+    .pf;
+    top: 0;
+    .flex1;
+    background-color: @bg_color;
+    img {
+        max-width: 42px;
+        .pa;
+        right: 30px; //这里父元素的align-center的居中效果对绝对定位有效
+    }
+    button {
+        width: 20%;
+        height: 70px;
+        .btnstyle;
+        font-size: 3.4rem;
+    }
+    .btn1 {
+        background-color: #55a8b3;
+        color: #fff;
+        margin-right: -5px;
+    }
+    .btn2 {
+        background-color: #fff;
+        color: #5fc0cd;
+        margin-left: -5px;
+    }
+}
+nav {
+    background-color: #fff;
+    width: 100%;
+    border-bottom: @borderxian;
+    .flex1;
+    .pf;
+    top: 80px;
+    select {
+        outline: none;
+        .clearstyle;
+        background: url(./img/shape2.png) no-repeat 95% center;
+        // background: url(./img/xian.png) no-repeat left center;
+        height: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        flex: 1;
+        border: none;
+        font-size: 2.8rem;
+        // padding-left: 68px;
+        text-align-last: center;
+        padding: 0 68px;
+        border-right: @borderxian;
+        color: @colorhui;
+    }
+    #sel3 {
+        border: none;
+    }
+}
+.content {
+    width: 100%;
+    margin-top: 160px;
+    margin-bottom: 101px;
+    overflow: auto;
+    
+    .line {
+        padding: 10px 30px;
+        border-bottom: @borderxian;
+        .fwrq {
+            .fontz;
+            color: @colorhui;
+            margin-left: 15px;
+        }
+        .time1 {
+            .fontz;
+            margin-left: 40px;
+        }
+        .adress {
+            .fwrq;
+            margin-left: 18px;
+        }
+        .time1 {
+            .overf;
+        }
+        .time2 {
+            font-size: 3rem;
+            color: #e63b0e;
+        }
+        .line1_2 {
+            .overf;
+            .flex1;
+            justify-content: space-between;
+            div {
+                .flex1;
+                .time2 {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: #f8fafb;
+    border-top: @borderxian;
+    .flex1;
+    justify-content: space-around;
+    .pf;
+    bottom: 0;
+    .logo2 {
+       
+        max-width: 94px;
+    }
+    .lie1, .lie2 {
+        height: 100%;
+        .flex2;
+    }
+    .logo1 {
+        max-width: 46px;
+        display: block;
+    }
+    .logo3 {
+        max-width: 42px;
+        display: block;
+    }
+    .tip1 {
+        font-size: 2rem;
+        color: @bg_color;
+    }
+    .tip2 {
+        font-size: 2rem;
+        color: @colorhui;
+    }
+}
+.content>.noborder {
+    border: none;
+}
+
+
+@media all and (max-width:680px) {
+    html {
+        font-size: 40%;
+    }
+
+    header {
+        button {
+            width: 32%;
+        }
+        img {
+            right: 0;
+        }
+    }
+    nav {
+        select {
+            padding: 0;
+        }
+    }
+}
