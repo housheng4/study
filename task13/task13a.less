@@ -25,15 +25,12 @@ html {
 }
 
 .leftlist {
-    .positiona;
+    // transition: all .5s ease-in-out .1s;
     z-index: 99999;
-    top: 0;
-    // bottom: 0;
-    left: -50%;
     .head-bgcolor;
     width: 30%;
-    height: 100%;
     li {
+        
         .flex-row-sb;
         font-size: 25px;
         color: #fff;
@@ -41,23 +38,45 @@ html {
         margin: 20px 0;
         border-bottom: 2px solid #ccc;
     }
+    display: none;
+}
+.mybody {
+    width: 70%;
+    flex: 1;
+    // transition: all .5s ease-in-out .1s;
+}
+.main {
+    display: flex;
 }
 
 .header {
     .head-bgcolor;
     .fontwhite;
     .head-height;
-    .input1 {
-        display: none;
-    }
-    .input1+label {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        background: url(./img/aaa.png) no-repeat center;
-        cursor: pointer;
-    }
 }
+.input1 {
+    display: none;
+}
+#ladong+label {
+    display: block;
+    .positiona;
+    left: 20px;
+    z-index: 99999;
+    width: 100px;
+    height: 80px;
+    background: url(./img/aaa.png) no-repeat center;
+    cursor: pointer;
+}
+#ladong:checked ~ nav.leftlist {
+    display: block;
+}
+#ladong:checked+label {
+    left: 30%;
+}
+// .main:hover nav.leftlist {
+//     background-color: red;
+// }
+
 .content {
     .whitenowap;
     padding: 27px 36px 62px;
@@ -132,25 +151,21 @@ html {
     }
 }
 
-.main>.header>.input1:checked+label {
-    
-    .leftlist {
-        left: 0;
-    }
-    // .main {
-    //     margin-left: 100px;
-    // }
 
-}
-.main>.header>.input1:checked ~ .main{ 
-    margin-left: 100px;
-    padding-left: 100px;
-}
 @media all and(max-width:500px) {
     html {
         font-size: 30%;
     }
     .content>.game>.easy {
         width: 70%;
+    }
+    ul>li {
+        flex-direction: column;
+    }
+    .leftlist {
+        width: 13%;
+    }
+    #ladong:checked+label {
+        left: 10%;
     }
 }

@@ -155,13 +155,10 @@ html {
   float: left;
 }
 .leftlist {
-  position: absolute;
   z-index: 99999;
-  top: 0;
-  left: -50%;
   background-color: #29bde0;
   width: 30%;
-  height: 100%;
+  display: none;
 }
 .leftlist li {
   display: flex;
@@ -173,20 +170,36 @@ html {
   margin: 20px 0;
   border-bottom: 2px solid #ccc;
 }
+.mybody {
+  width: 70%;
+  flex: 1;
+}
+.main {
+  display: flex;
+}
 .header {
   background-color: #29bde0;
   color: #fff;
   height: 80px;
 }
-.header .input1 {
+.input1 {
   display: none;
 }
-.header .input1 + label {
-  display: inline-block;
+#ladong + label {
+  display: block;
+  position: absolute;
+  left: 20px;
+  z-index: 99999;
   width: 100px;
-  height: 100px;
+  height: 80px;
   background: url(img/aaa.png) no-repeat center;
   cursor: pointer;
+}
+#ladong:checked ~ nav.leftlist {
+  display: block;
+}
+#ladong:checked + label {
+  left: 30%;
 }
 .content {
   white-space: nowrap;
@@ -269,18 +282,20 @@ html {
 .content .game .yuan .yuana:hover {
   background-color: #29bde0;
 }
-.main > .header > .input1:checked + label .leftlist {
-  left: 0;
-}
-.main > .header > .input1:checked ~ .main {
-  margin-left: 100px;
-  padding-left: 100px;
-}
 @media all and (max-width: 500px) {
   html {
     font-size: 30%;
   }
   .content > .game > .easy {
     width: 70%;
+  }
+  ul > li {
+    flex-direction: column;
+  }
+  .leftlist {
+    width: 13%;
+  }
+  #ladong:checked + label {
+    left: 10%;
   }
 }
