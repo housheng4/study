@@ -1,0 +1,263 @@
+.body-bgcolor {
+  background-color: #f0f0f0;
+}
+.outlinenone {
+  outline: none;
+}
+.btnnone {
+  outline: none;
+  border: none;
+}
+.textcenter {
+  text-align: center;
+}
+.flexc {
+  display: flex;
+  align-items: center;
+}
+.flex-row-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-row-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-row-sa {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flexju {
+  display: flex;
+  justify-content: center;
+}
+.flex-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-col-c {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-col-sb {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}
+.flex-col-sa {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
+}
+.fontwhite {
+  color: #fff;
+}
+.fontblack {
+  color: #000;
+}
+.whitenowap {
+  white-space: nowrap;
+}
+.clearselectstyle {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.overflowhidden {
+  overflow: hidden;
+}
+.overflowdian {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.overflowauto {
+  overflow: auto;
+}
+.cursor {
+  cursor: pointer;
+}
+.head-bgcolor {
+  background-color: #29bde0;
+}
+.fontwhite {
+  color: #fff;
+}
+.head-height {
+  height: 80px;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.positionr {
+  position: relative;
+}
+.positiona {
+  position: absolute;
+}
+.positionf {
+  position: fixed;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+.bgcolor {
+  background-color: #29bde0;
+}
+.border {
+  border: 1px solid #74d4eb;
+}
+.rowcenter {
+  margin: 0 auto;
+}
+.contentwidth {
+  width: 75.3%;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.header {
+  height: 90px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #29bde0;
+  border: 1px solid #74d4eb;
+  color: #fff;
+  font-size: 3.4rem;
+}
+.content {
+  padding-top: 25px;
+  background-color: #29bde0;
+}
+.content .victory {
+  display: block;
+  width: 55%;
+  max-width: 351px;
+  margin: 0 auto;
+}
+.content .contentresult {
+  width: 75.3%;
+  margin: 30px auto 60px;
+  font-size: 3.3rem;
+  color: #ffc865;
+}
+.content .contentreport {
+  width: 75.3%;
+  margin: 0 auto;
+  font-size: 2.6rem;
+  color: #fff;
+}
+.content .contentreport .report2 {
+  margin-top: 15px;
+  display: flex;
+}
+.content .contentreport .report2 .boxcol1 {
+  width: 35%;
+}
+.content .contentreport .report2 .boxcol2 {
+  width: 30%;
+}
+.content .contentreport .report3 {
+  margin-top: 15px;
+  margin-bottom: 24px;
+}
+.content .day {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.content .day .day1 {
+  width: 75.3%;
+  margin: 0 auto;
+  padding: 12px 0 20px 0;
+}
+.content .day .day1 .daytime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.content .day .day1 .daytime .days {
+  font-size: 3rem;
+  color: #515151;
+}
+.content .day .day1 .daytime .time {
+  font-size: 2rem;
+  color: #c7c7c7;
+}
+.content .day .day1 .dayc {
+  font-size: 2.6rem;
+  color: #a6a6a6;
+  margin-bottom: 15px;
+}
+.footer {
+  width: 100%;
+  height: 130px;
+  background-color: rgba(41, 189, 224, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+}
+.footer a {
+  display: block;
+  width: 42%;
+}
+.footer a .footerbtn1 {
+  width: 100%;
+  height: 90px;
+  background-color: #f66f6f;
+  font-size: 4rem;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+  color: #fff;
+}
+.footer .footerbtn2 {
+  width: 42%;
+  background-color: #fbb435;
+  height: 90px;
+  font-size: 4rem;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+  color: #fff;
+}
+@media all and (max-width: 580px) {
+  html {
+    font-size: 38%;
+  }
+}

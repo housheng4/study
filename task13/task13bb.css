@@ -1,0 +1,266 @@
+.head-bgcolor {
+  background-color: #29bde0;
+}
+.fontwhite {
+  color: #fff;
+}
+.head-height {
+  height: 80px;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.positionr {
+  position: relative;
+}
+.positiona {
+  position: absolute;
+}
+.positionf {
+  position: fixed;
+}
+.body-bgcolor {
+  background-color: #f0f0f0;
+}
+.outlinenone {
+  outline: none;
+}
+.btnnone {
+  outline: none;
+  border: none;
+}
+.textcenter {
+  text-align: center;
+}
+.flexc {
+  display: flex;
+  align-items: center;
+}
+.flex-row-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-row-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-row-sa {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-col-c {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-col-sb {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}
+.flex-col-sa {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
+}
+.fontwhite {
+  color: #fff;
+}
+.fontblack {
+  color: #000;
+}
+.whitenowap {
+  white-space: nowrap;
+}
+.clearselectstyle {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.overflowhidden {
+  overflow: hidden;
+}
+.overflowdian {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.overflowauto {
+  overflow: auto;
+}
+.cursor {
+  cursor: pointer;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #29bde0;
+}
+.header .headertop {
+  height: 80px;
+  padding: 0 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3.4rem;
+  color: #fff;
+}
+.header .headermiddle {
+  padding: 0 20px 0 46px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b9e9f5;
+  font-size: 2.6rem;
+  color: #000;
+  color: #4d5051;
+}
+.header .headerbottom {
+  position: relative;
+  height: 70px;
+  padding-left: 72px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 2.4rem;
+}
+.header .headerbottom img {
+  position: absolute;
+  top: 0;
+}
+.content {
+  width: 100%;
+  position: absolute;
+  top: 230px;
+  bottom: 190px;
+  overflow: auto;
+  background-color: #29bde0;
+}
+.content .contentbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content .contentbox .item {
+  padding-top: 20px;
+  width: 138px;
+  height: 189px;
+}
+.content .contentbox .item:hover .itemB {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .contentbox .item .itemA {
+  height: 138px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.content .contentbox .item .itemA .zhiye {
+  width: 128px;
+  height: 93px;
+  background-color: #f5c97b;
+  font-size: 3rem;
+  color: #565656;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .contentbox .item .itemA .number {
+  width: 128px;
+  height: 35px;
+  font-size: 2.2rem;
+  background-color: #83b09a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .contentbox .item .itemB {
+  display: none;
+  margin-top: 21px;
+  height: 30px;
+}
+.content .contentbox .item .itemB .itemBimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+.footer a {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 190px;
+  background-color: #29bde0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer a .footerbtn {
+  width: 76.71%;
+  height: 91px;
+  background-color: #fbb435;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 4rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+@media all and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  .content .contentbox {
+    flex-direction: column;
+  }
+}

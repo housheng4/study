@@ -1,0 +1,129 @@
+@import "./head.less";
+@import "./body.less";
+@import "./cssreset.less";
+html {
+    font-size: 62.5%;
+}
+.header {
+    width: 100%;
+    .positionf;
+    top: 0;
+    .head-bgcolor;
+    .headertop {
+        .head-height;
+        padding: 0 23px;
+        .flex-row-sb;
+        font-size: 3.4rem;
+        .fontwhite;
+    }
+    .headermiddle {
+        padding: 0 20px 0 46px;
+        .head-height;
+        .flex-row-sb;
+        background-color: #b9e9f5;
+        font-size: 2.6rem;
+        .fontblack;
+    }
+    .headerbottom {
+        .positionr;
+        height: 70px;
+        padding-left: 72px;
+        .flexc;
+        .fontwhite;
+        font-size: 24px;
+        img {
+            .positiona;
+            top: 0;
+        }
+    }
+}
+.content {
+    width: 100%;
+    .positiona;
+    top: 230px;
+    bottom: 190px;
+    overflow: auto;
+    .head-bgcolor;
+    display: flex;
+    flex-wrap: wrap;
+    .contentbox {
+        width: 30%;
+        margin: 0 auto;
+        .flex-row-c;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // .itemx {
+        //    flex: 1;
+        // }
+        .item{
+            
+            // margin: 20px 35px 0 35px;
+            width: 138px;
+            height: 189px;
+            .itemA {
+                height: 138px;
+                background-color: #fff;
+                .flex-col-c;
+                .zhiye {
+                    width: 128px;
+                    height: 93px;
+                    background-color: #f5c97b;
+                    font-size: 3rem;
+                }
+                .number {
+                    width: 128px;
+                    height: 35px;
+                    font-size: 2.2rem;
+                    background-color: #83b09a;
+                }
+            }
+            .itemB {
+                margin-top: 21px;
+                height: 30px;
+                background-color: chartreuse;
+            }
+        }
+    }
+}
+@media all and(max-width:800px) {
+    .content {
+        // flex-direction: column;
+        // flex-wrap: nowrap;
+        .contentbox {
+            width: 40%;
+        }
+    }
+    
+}
+@media all and(max-width:400px) {
+    .content {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        .contentbox {
+            width: 40%;
+        }
+    }
+    
+}
+
+
+
+
+.footer {
+    width: 100%;
+    .positionf;
+    bottom: 0;
+    height: 190px;
+    .head-bgcolor;
+    .flex-col-c;
+    .footerbtn {
+        width: 76.71%;
+        height: 91px;
+        background-color: #fbb435;
+        .fontwhite;
+        margin-top: 40px;
+        font-size: 4rem;
+        .btnnone;
+        cursor: pointer;
+    }
+}

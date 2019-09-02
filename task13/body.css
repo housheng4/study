@@ -1,0 +1,113 @@
+.body-bgcolor {
+  background-color: #f0f0f0;
+}
+.outlinenone {
+  outline: none;
+}
+.btnnone {
+  outline: none;
+  border: none;
+}
+.textcenter {
+  text-align: center;
+}
+.flexc {
+  display: flex;
+  align-items: center;
+}
+.flex-row-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-row-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-row-sa {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flexju {
+  display: flex;
+  justify-content: center;
+}
+.flex-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-col-c {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-col-sb {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}
+.flex-col-sa {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
+}
+.fontwhite {
+  color: #fff;
+}
+.fontblack {
+  color: #000;
+}
+.whitenowap {
+  white-space: nowrap;
+}
+.clearselectstyle {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.overflowhidden {
+  overflow: hidden;
+}
+.overflowdian {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.overflowauto {
+  overflow: auto;
+}
+.cursor {
+  cursor: pointer;
+}
+.head-bgcolor {
+  background-color: #29bde0;
+}
+.fontwhite {
+  color: #fff;
+}
+.head-height {
+  height: 80px;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.positionr {
+  position: relative;
+}
+.positiona {
+  position: absolute;
+}
+.positionf {
+  position: fixed;
+}
