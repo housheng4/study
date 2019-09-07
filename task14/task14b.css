@@ -372,6 +372,9 @@ html {
   display: flex;
   align-items: center;
 }
+.page2pim .pimbox2 div img {
+  margin-left: 8px;
+}
 .page2pim .pimbox2 div:nth-child(1) {
   border-right: none;
   border-bottom: none;
@@ -381,15 +384,6 @@ html {
 }
 .page2pim .pimbox2 div:nth-child(2) {
   border-bottom: none;
-}
-.page2pim .pimbox2 div:nth-child(4) span {
-  flex-shrink: 0;
-}
-.page2pim .pimbox2 div:nth-child(4) b {
-  flex-shrink: 0;
-}
-.page2pim .pimbox2 div img {
-  padding-left: 10px;
 }
 .page2pim .pimbox2:after {
   content: "";
