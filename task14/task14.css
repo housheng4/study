@@ -247,6 +247,7 @@ input {
 .footer .footcol .footbox4,
 .footer .footcol .footbox11 {
   margin-top: 40px;
+  margin-bottom: 5px;
 }
 .footer .footcol .footbox7 {
   margin-top: 66px;
@@ -260,7 +261,7 @@ input {
   margin-right: 30px;
 }
 .footer .footcol .QRcode {
-  max-width: 85px;
+  max-width: 80px;
   vertical-align: top;
 }
 .ffootbox {
@@ -590,7 +591,7 @@ input {
 .page2 .student,
 .page3 .student {
   width: 22.41%;
-  padding: 15px 30px 0;
+  padding: 15px 30px 30px;
   background-color: #fff;
   display: flex;
   align-items: center;

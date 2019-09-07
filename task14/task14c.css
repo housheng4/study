@@ -152,6 +152,7 @@ input {
 .footer .footcol .footbox4,
 .footer .footcol .footbox11 {
   margin-top: 40px;
+  margin-bottom: 5px;
 }
 .footer .footcol .footbox7 {
   margin-top: 66px;
@@ -165,7 +166,7 @@ input {
   margin-right: 30px;
 }
 .footer .footcol .QRcode {
-  max-width: 85px;
+  max-width: 80px;
   vertical-align: top;
 }
 .ffootbox {
@@ -294,7 +295,7 @@ body {
   background-color: #fafafa;
 }
 .page3img img {
-  max-width: 100%;
+  width: 100%;
 }
 .main {
   padding: 0 18.75%;
@@ -374,6 +375,7 @@ body {
   line-height: 2em;
 }
 .main .content .right-thing .rightbottom {
+  margin-bottom: 180px;
   word-break: break-all;
   text-indent: 2rem;
   font-size: 1.4rem;
