@@ -5,6 +5,9 @@
 .flexjsa {
   justify-content: space-around;
 }
+.flexja {
+  justify-content: center;
+}
 .flexsb {
   display: flex;
   justify-content: space-between;
@@ -36,6 +39,9 @@
   flex-direction: column;
   display: flex;
   align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
 }
 .disn {
   display: none;
@@ -159,7 +165,7 @@ html {
   zoom: 1;
 }
 .page2pim .pimbox2 div {
-  padding: 10px;
+  padding: 1%;
   box-sizing: border-box;
   float: left;
   width: 50%;

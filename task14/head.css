@@ -4,6 +4,9 @@
 .flexjsa {
   justify-content: space-around;
 }
+.flexja {
+  justify-content: center;
+}
 .flexsb {
   display: flex;
   justify-content: space-between;
@@ -35,6 +38,9 @@
   flex-direction: column;
   display: flex;
   align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
 }
 .disn {
   display: none;
@@ -128,7 +134,10 @@
   background-position: -153px -98px;
 }
 .navtop {
-  height: 10rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100px;
   padding: 0 18.75%;
   background-color: #29b078;
   display: flex;

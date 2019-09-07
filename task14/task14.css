@@ -135,7 +135,10 @@
   background-position: -153px -98px;
 }
 .navtop {
-  height: 10rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100px;
   padding: 0 18.75%;
   background-color: #29b078;
   display: flex;
@@ -383,7 +386,7 @@ body {
 .main .page1line1 .colbox4 .peoplebox1 {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 39px;
 }
 .main .page1line1 .colbox4 .peoplebox2 {
   margin-top: 10px;
@@ -412,6 +415,7 @@ body {
 }
 .main .page1line2 .learn-box .box1 img {
   margin-right: 5%;
+  flex-shrink: 0;
 }
 .main .page1line2 .learn-box .box1a {
   width: 19%;
@@ -419,8 +423,8 @@ body {
   align-items: center;
 }
 .main .page1line2 .learn-box .yuan {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   color: #29b078;
   background-color: #fff;
   border-radius: 50%;
@@ -591,7 +595,7 @@ input {
 .page2 .student,
 .page3 .student {
   width: 22.41%;
-  padding: 15px 30px 30px;
+  padding: 15px 10px 30px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -730,5 +734,11 @@ input {
   }
   .page1line5 .all-link ul li {
     margin: 3px 0;
+  }
+}
+@media all and (min-width: 1600px) {
+  .main .page1line2 .learn-box .yuan {
+    width: 70px;
+    height: 70px;
   }
 }

@@ -41,7 +41,10 @@
   background-position: -153px -98px;
 }
 .navtop {
-  height: 10rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100px;
   padding: 0 18.75%;
   background-color: #29b078;
   display: flex;
@@ -360,7 +363,7 @@ html {
   zoom: 1;
 }
 .page2pim .pimbox2 div {
-  padding: 10px;
+  padding: 1%;
   box-sizing: border-box;
   float: left;
   width: 50%;
