@@ -74,12 +74,12 @@ input {
   position: relative;
 }
 .btnlunbo2 {
-  width: 50px;
+  width: 70px;
   height: 13px;
   position: absolute;
-  bottom: -25px;
+  bottom: -35px;
   left: 50%;
-  margin-left: -25px;
+  margin-left: -35px;
   display: flex;
   justify-content: space-between;
 }
