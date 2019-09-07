@@ -1,0 +1,101 @@
+// flex
+.disf {
+    display: flex;
+}
+.flexjsa {
+    justify-content: space-around;
+}
+.flexja {
+    justify-content: center;
+}
+.flexsb {
+    .disf;
+    justify-content: space-between;
+}
+.flexfcs {
+    .disf;
+    align-items: center;
+    justify-content: space-between;
+}
+.flexfc {
+    .disf;
+    align-items: center;
+}
+.flexfcc {
+    .flexfc;
+    justify-content: center;
+}
+.alignflexs {
+    align-items: flex-start;
+}
+.flexcol {
+    flex-direction: column;
+}
+.justflexend {
+    justify-content: flex-end;
+}
+.flexcolc {
+    .flexcol;
+    .flexfc;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+ //display
+.disn {
+    display: none;
+}
+.disb {
+    display: block;
+}
+.disib {
+    display: inline-block;
+}
+
+// 定位
+.posa {
+    position: absolute;
+}
+.posr {
+    position: relative;
+}
+.posf {
+    position: fixed;
+}
+// 其他
+.borderbox {
+    box-sizing: border-box;
+}
+.visih {
+    visibility: hidden;
+}
+.visiv {
+    visibility: visible;
+}
+// 文本
+.textac {
+    text-align: center;
+}
+.fontbold {
+    font-weight: bolder;
+}
+.wordbreak {
+    word-break: break-all;
+}
+// 清除浮动
+.clearfix {
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
+    zoom: 1; 
+}
+//浮动
+.floatl {
+    float: left;
+}
+.floatr {
+    float: right;
+}

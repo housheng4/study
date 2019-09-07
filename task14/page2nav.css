@@ -1,0 +1,105 @@
+@import "../CSSreset.css";
+.disf {
+  display: flex;
+}
+.flexjsa {
+  justify-content: space-around;
+}
+.flexsb {
+  display: flex;
+  justify-content: space-between;
+}
+.flexfcs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flexfc {
+  display: flex;
+  align-items: center;
+}
+.flexfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alignflexs {
+  align-items: flex-start;
+}
+.flexcol {
+  flex-direction: column;
+}
+.justflexend {
+  justify-content: flex-end;
+}
+.flexcolc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.disn {
+  display: none;
+}
+.disb {
+  display: block;
+}
+.disib {
+  display: inline-block;
+}
+.posa {
+  position: absolute;
+}
+.posr {
+  position: relative;
+}
+.posf {
+  position: fixed;
+}
+.borderbox {
+  box-sizing: border-box;
+}
+.visih {
+  visibility: hidden;
+}
+.visiv {
+  visibility: visible;
+}
+.textac {
+  text-align: center;
+}
+html {
+  font-size: 62.5%;
+}
+.page2nav {
+  height: 59px;
+  border-bottom: 1px solid #edf1f2;
+  display: flex;
+  align-items: center;
+}
+.page2nav ul {
+  display: flex;
+  align-items: center;
+}
+.page2nav ul li {
+  margin-right: 35px;
+  font-size: 1.4rem;
+}
+.page2nav ul li:first-child {
+  margin-right: 25px;
+}
+.page2nav ul li a {
+  color: #000;
+  padding: 0.1em;
+}
+.page2nav ul li a:hover {
+  background-color: #29b078;
+  color: #fff;
+}
+@media all and (max-width: 760px) {
+  .page2nav ul li {
+    margin-right: 5px;
+  }
+  .page2nav ul li:first-child {
+    margin-right: 5px;
+  }
+}

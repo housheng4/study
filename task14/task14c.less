@@ -1,0 +1,125 @@
+@import "./head.less";
+@import "./footer.less";
+@import "../CSSreset.css";
+@import "./common.less";
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #fafafa;
+}
+.page3img {
+    img {
+        max-width: 100%;
+    }
+}
+.main {
+    padding: 0 18.75%;
+    .pagetip {
+        height: 80px;
+        font-size: 1.6rem;
+        font-weight: bolder;
+        .flexfc;
+        .a1 {
+            color: #000;
+        }
+        .a2 {
+            color: #29b078;
+        }
+    }
+    .content {
+        .disf;
+        .left-thing {
+            width: 25%;
+            background-color: #fff;
+            box-shadow: 0 0 2px #e6e6e6;
+            padding-bottom: 30px;
+            height: fit-content;
+            .left-box1 {
+                height: 60px;
+                .flexfcc;
+                font-size: 1.6rem;
+                .fontbold;
+                border-bottom: 1px solid #e6e6e6;
+            }
+            .left-box2 {
+                .disf;
+                .flexcol;
+                .firm {
+                    line-height: 52.5px;
+                    color: #29b078;
+                    font-size: 1.4rem;
+                    .flexfcc;
+                    &:hover .yuan {
+                        background: url(./image/yuan.png)no-repeat;
+                    }
+                    .yuan {
+                        margin-right: 3px;
+                        width: 10px;
+                        height: 10px;
+                        background: url(./image/kongyuan.png) no-repeat;
+                    }
+                }
+            } 
+        }
+        .right-thing {
+            margin-left: 3%;
+            width: 72%;
+            background-color: #fff;
+            margin-bottom: 200px;
+            box-shadow: 0 0 2px #e6e6e6;
+            .righttop {
+                color: rgb(153, 153, 153);
+                .wordbreak;
+                .flexfc;
+                .potato {
+                    max-width: 100%;
+                }
+                .history {
+                    padding: 2em 4em 2em 0;
+                    font-size: 1.4rem;
+                    line-height: 2em;
+                }
+            }
+            .rightbottom {
+                .wordbreak;
+                text-indent: 2rem;
+                font-size: 1.4rem;
+                color: rgb(153, 153, 153);
+                line-height: 2.8rem;
+                padding: 0 2.5em;
+                p {
+                    margin-top: 2em;
+                }
+            }
+            
+        }
+        
+    }
+}
+@media all and (max-width:780px) {
+    .main {
+        .content {
+            .right-thing{
+                .righttop {
+                    .wrap;
+                    .flexja;
+                    .history {
+                        width: 100%;
+                        padding: 0 2.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:480px) {
+    .main {
+        .content {
+            .flexcol;
+            .left-thing, .right-thing {
+                width: 100%;
+            }
+        }
+    }
+}

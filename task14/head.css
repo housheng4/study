@@ -1,0 +1,222 @@
+.disf {
+  display: flex;
+}
+.flexjsa {
+  justify-content: space-around;
+}
+.flexsb {
+  display: flex;
+  justify-content: space-between;
+}
+.flexfcs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flexfc {
+  display: flex;
+  align-items: center;
+}
+.flexfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alignflexs {
+  align-items: flex-start;
+}
+.flexcol {
+  flex-direction: column;
+}
+.justflexend {
+  justify-content: flex-end;
+}
+.flexcolc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.disn {
+  display: none;
+}
+.disb {
+  display: block;
+}
+.disib {
+  display: inline-block;
+}
+.posa {
+  position: absolute;
+}
+.posr {
+  position: relative;
+}
+.posf {
+  position: fixed;
+}
+.borderbox {
+  box-sizing: border-box;
+}
+.visih {
+  visibility: hidden;
+}
+.visiv {
+  visibility: visible;
+}
+.textac {
+  text-align: center;
+}
+.fontbold {
+  font-weight: bolder;
+}
+.wordbreak {
+  word-break: break-all;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.floatl {
+  float: left;
+}
+.floatr {
+  float: right;
+}
+.logo {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url(image/css_sprites.png);
+}
+.toptop {
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #29b078;
+  padding: 0 18.75%;
+  font-size: 1.4rem;
+}
+.toptop .toplogo {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toptop .toplogo .logo1 {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url(image/css_sprites.png);
+  background-position: -153px -9px;
+}
+.toptop .toplogo .logo2 {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url(image/css_sprites.png);
+  background-position: -153px -54px;
+}
+.toptop .toplogo .logo3 {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url(image/css_sprites.png);
+  background-position: -153px -98px;
+}
+.navtop {
+  height: 10rem;
+  padding: 0 18.75%;
+  background-color: #29b078;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navtop .jnlogodiv {
+  flex: 1;
+}
+.navtop .jnlogodiv .jnlogo {
+  max-width: 130px;
+  min-width: 80px;
+}
+.navtop .navcontent {
+  display: flex;
+  margin-right: -34px;
+}
+.navtop .navcontent .a1 {
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+}
+.navtop .navcontent .a1 .navtips {
+  height: 96px;
+  font-size: 1.6rem;
+}
+.navtop .navcontent .a1 .border {
+  height: 4px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.navtop .navcontent .a1:hover .border {
+  visibility: visible;
+}
+.navchild {
+  display: none;
+}
+input {
+  display: none;
+}
+.navlogo {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 3.3%;
+}
+.navlogo img {
+  padding: 8px;
+  background-color: #47d197;
+  border-radius: 8px;
+}
+.navlogo img:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+@media all and (max-width: 1400px) {
+  .toptop,
+  .navtop {
+    padding: 0 10%;
+  }
+}
+@media all and (max-width: 760px) {
+  .toptop,
+  .navtop {
+    padding: 0 3%;
+  }
+  .navright {
+    display: none;
+  }
+  input:checked ~ .navchild {
+    display: block;
+  }
+  .navlogo {
+    display: block;
+  }
+  .navchild ul {
+    margin: 0;
+  }
+  .navchild ul li {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #29b078;
+    cursor: pointer;
+  }
+  .navchild ul li:hover {
+    background-color: #38c58a;
+  }
+}

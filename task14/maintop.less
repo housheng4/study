@@ -1,0 +1,68 @@
+@import "./common.less";
+@import "../CSSreset.css";
+html {
+    font-size: 62.5%;
+}
+.main {
+    padding: 0 18.75%;
+    .pagetip {
+        height: 78.5px;
+        border-bottom: 1.5px solid #d0d6d9;
+        font-size: 1.6rem;
+        font-weight: bolder;
+        .flexfc;
+        .a1 {
+            color: #000;
+        }
+        .a2 {
+            color: #29b078;
+        }
+    }
+    .pagenav {
+        height: 59px;
+        border-bottom: 1px solid rgb(237, 241, 242);
+        .flexfc;
+        ul {
+            .flexfc;
+            li {
+                margin-right: 35px;
+                font-size: 1.4rem;
+                &:first-child {
+                    margin-right: 25px;
+                }
+                a {
+                    color: #000;
+                    padding: 0.1em;
+                    &:hover {
+                        background-color: #29b078;
+                        color: #fff;
+                    }
+                }
+            }
+           
+        }
+    }
+}
+
+
+
+@media all and (max-width:1400px) {
+    .main {
+        padding: 0 10%;
+    }
+}
+@media all and (max-width:760px) {
+    .main {
+        padding: 0 3%;
+        .pagenav {
+            ul {
+                li {
+                    margin-right: 5px;
+                    &:first-child {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        } 
+    }
+}

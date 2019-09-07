@@ -1,0 +1,420 @@
+@import "../CSSreset.css";
+@import "./common.less";
+@import "./head.less";
+@import './footer.less';
+// @import "./page1.less";
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #fafafa;
+}
+
+.line1img {
+    height: 62px;
+    .flexfcc;
+    img {
+        max-width: 100%;
+        min-width: 30px;
+    }
+}
+.linetip{
+    color: #333333;
+    font-weight: bold;
+    font-size:  1.8rem;
+    .textac;
+    margin-bottom: 50px;
+}
+.carousel {
+    background-color: #ccc;
+    img {
+        max-width: 100%;
+        vertical-align: top;//去掉inline元素基线问题导致的间隙
+    }
+}
+.main{
+    padding: 0 18.75%;
+    font-size: 1.6rem;
+    color: #999999;
+    .page1line1 {
+        .disf;
+        margin-top: 150px;
+        margin-bottom: 120px;
+        .colbox {
+            width: 25.125%;
+            padding: 0 4%;
+            .borderbox;
+            .rocket, .book, .connection {
+                .line1img;
+            }
+            .word1, .word2, .word3 {
+                .textac;
+                color: #333333;
+                margin: 30px 0;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            line-height: 25px;
+        }
+        .colbox1 {
+            padding-left: 0;
+        }
+        .colbox3 {
+            width: 28%;
+        }
+        .people {
+            color: #29b078;
+        }
+        .colbox4 {
+            width: 21.75%;
+            .borderbox;
+            padding-left: 4.5%;
+            padding-top: 2.6%;
+            border-left: 1px dashed #dedede;
+            .peoplehead {
+                padding-right: 10px;
+                width: 18px;
+                height: 18px;
+                background-image: url(./image/css_sprites.png);
+                background-position: -46px -153px;
+            }
+            .peoplebox1 {
+                .flexfc;
+                margin-top: 30px;
+            }
+            .peoplebox2 {
+                margin-top: 10px;
+            }
+        }
+    }
+    .page1line4, .page1line3, .page1line2, .page1line5{
+        .linetip {
+            .linetip;
+        }
+    }
+    .page1line2 {
+        .learn-box {
+            margin-bottom: 90px;
+            .flexfcs;
+            .box1 {
+                width: 27%;
+                .flexfcs;
+                img {
+                    margin-right: 5%;
+                }
+            }
+            .box1a {
+                width: 19%;
+                .flexfc;
+            }
+            .yuan {
+                width: 70px;
+                height: 70px;
+                color: #29b078;
+                background-color: #fff;
+                border-radius: 50%;
+                box-shadow:0 0 1px #e4e4e4;
+                .flexfcc;
+                margin-right: 5%;
+                // 不让圆被压缩
+                flex-shrink: 0;
+            }
+            .word {
+                font-size: 1.4rem;
+                margin-right: 1%;
+            }
+        }
+    }
+    .page1line4 {
+        .qiye {
+            margin-top: 90px;
+        }
+        .firm {
+            .flexfc;
+            background-color: #fff;
+            .firmlogoa {
+                width: 20%;
+                height: 170px;
+                .flexfcc;
+                .borderbox;
+                padding: 4px;
+                img {
+                    max-width: 100%;
+                    
+                }
+                &:hover {
+                    box-shadow: 0px 1px 13px 0px rgba(8, 1, 3, 0.1);;
+                }
+            }
+        }
+    }
+}
+.page1line5 {
+    margin-top: 90px;
+    padding: 0 18.75%;
+    background-color: #fff;
+    .linetip {
+        .linetip;
+    }
+    .all-link {
+        // padding-left: 1em;
+        ul {
+            .flexfcs;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            li {
+                a {
+                    color: #999999;
+                    padding-bottom: 5px;
+                    &:hover {
+                        border-bottom: 1.5px solid #26a26f;
+                        // 链接hover效果
+                }
+                // 给前面加个圆点
+                &:before{content:"•";border-right:5px solid #fff;}
+            }
+            }
+        }
+    }
+}
+
+// 第一个轮播图
+.viewport {
+    .posr;
+    overflow: hidden;
+}
+.wrap {
+    .posr;
+    width: 300vw;
+    overflow: hidden;  
+}
+.wrap img {
+    width: 100vw;
+    height: auto;
+    float: left;
+}
+// input选框关联图片，同时图片左移动
+#pic1:checked ~ .wrap {
+    left: 0;
+    transition: 0.5s linear;
+}
+// 按钮一背景白色出现
+#pic1:checked ~ .btnlunbo>.btn1 {
+    background-color: #fff;
+}
+#pic2:checked ~ .wrap {
+    left: -100vw;
+    transition: 0.5s linear;
+}
+// #pic2:checked ~ .btnlunbo>.btn1 {
+//     background:none;
+// }
+#pic2:checked ~ .btnlunbo>.btn2 {
+    background-color: #fff;
+}
+#pic3:checked ~ .wrap {
+    left: -200vw;
+    transition: 0.5s linear;
+}
+#pic3:checked ~ .btnlunbo>.btn3 {
+    background-color: #fff;
+}
+// 2d转换做一个箭头
+.arrow1 label {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    border-top: 1rem solid #7a7c87;
+    border-right: 1rem solid #7a7c87;
+    transform: rotate(-135deg);
+}
+// 箭头位置和关联的图片顺序
+#pic1:checked ~ .arrow1 label:nth-of-type(3),
+#pic2:checked ~ .arrow1 label:nth-of-type(1),
+#pic3:checked ~ .arrow1 label:nth-of-type(2) {
+    display: inline-block;
+    .posa;
+    top: 50%;
+    left: 5rem;
+}
+// 使用2d转换座一个箭头
+.arrow2 label {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    border-bottom: 1rem solid #7a7c87;
+    border-left: 1rem solid #7a7c87;
+    transform: rotate(-135deg);
+}
+// 箭头位置和关联的图片顺序
+#pic1:checked ~ .arrow2 label:nth-of-type(2),
+#pic2:checked ~ .arrow2 label:nth-of-type(3),
+#pic3:checked ~ .arrow2 label:nth-of-type(1) {
+    display: inline-block;
+    .posa;
+    top: 50%;
+    right: 5rem;
+}
+input {
+    display: none;
+}
+.btnlunbo {
+    width: 70px;
+    height:20px;
+    .disf;
+    .flexjsa;
+    .posa;
+    z-index: 99999;
+    bottom: 2%;
+    left: 50%;
+    margin-left: -35px;
+}
+.btn1, .btn2, .btn3 {
+    display: block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+// 第二个轮播图
+input {
+    display: none;
+}
+.page1, .page2, .page3 {
+    display: flex;
+    justify-content: space-between;
+    .student {
+        width: 22.41%;
+        padding: 15px 30px 0;
+        background-color: #fff;
+        .flexfc;
+        .flexcol;
+        .borderbox;
+        img {
+            max-width: 100%;
+        }
+        .name {
+            margin-top: 35px;
+            margin-bottom: 5px;
+            color: #5d5d5d;
+            font-size: 1.8rem;
+        }
+        p {
+            color: #b0b0b0;
+            font-size: 1.6rem;
+        }
+    }
+}
+.page1 {
+    display: none;
+}
+.page2 {
+    display: none;
+}
+.page3 {
+    display: none;
+}
+#page1:checked ~ .page1 {
+    display: flex;
+}
+#page1:checked ~ .btnlunbo2>.btn1 {
+    background-color: #29b078;
+}
+#page2:checked ~ .page2 {
+    display: flex;
+}
+#page2:checked ~ .btnlunbo2>.btn2 {
+    background-color: #29b078;
+}
+#page3:checked ~ .page3 {
+    display: flex;
+}
+#page3:checked ~ .btnlunbo2>.btn3 {
+    background-color: #29b078;
+}
+.lunbo2 {
+    position: relative;
+}
+.btnlunbo2 {
+    width: 70px;
+    height: 13px;
+    // background-color: red;
+    .posa;
+    bottom: -35px;
+    left: 50%;
+    margin-left: -25px;
+    .flexsb;
+    .btn1, .btn2, .btn3 {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 1px #5d5d5d;
+    }
+}
+@media all and (max-width:1400px) {
+    .main {
+        padding: 0 10%;
+    }
+    .page1line5 {
+        padding: 0 10%;
+    }
+}
+@media all and (max-width:760px) {
+    .main {
+        padding: 0 3%;
+        .page1line5 {
+            padding: 0 3%;
+        }
+        .page1line1 {
+            margin-top: 0;
+            .flexcol;
+            .colbox, .colbox4 {
+                width: 100%;
+                margin-top: 30px;
+                padding: 0;
+                .textac;
+            }
+            .colbox4 {
+                .flexcolc;
+            }
+        }
+        .page1line2 {
+            .learn-box {
+                .flexcol;
+                .box1, .box1a {
+                    width: 100%;
+                    .word {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        .page1line3 {
+            .lunbo2 {
+                .page1, .page2, .page3 {
+                    flex-direction: column;
+                    .student {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        } 
+    }
+    .page1line5 {
+        .all-link {
+            display: flex;
+            ul {
+                .flexcol;
+                .alignflexs;
+                width: 50%;
+                li {
+                    margin: 3px 0;
+                }
+            }
+        }
+    }
+}

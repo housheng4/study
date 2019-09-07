@@ -1,0 +1,95 @@
+body {
+  background-color: #fafafa;
+}
+html {
+  font-size: 62.5%;
+}
+input {
+  display: none;
+}
+.page1,
+.page2,
+.page3 {
+  display: flex;
+  justify-content: space-between;
+}
+.page1 .student,
+.page2 .student,
+.page3 .student {
+  width: 22.41%;
+  padding: 15px 30px 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.page1 .student img,
+.page2 .student img,
+.page3 .student img {
+  max-width: 100%;
+}
+.page1 .student .name,
+.page2 .student .name,
+.page3 .student .name {
+  margin-top: 35px;
+  margin-bottom: 5px;
+  color: #5d5d5d;
+  font-size: 1.8rem;
+}
+.page1 .student p,
+.page2 .student p,
+.page3 .student p {
+  color: #b0b0b0;
+  font-size: 1.6rem;
+}
+.page1 {
+  display: none;
+}
+.page2 {
+  display: none;
+}
+.page3 {
+  display: none;
+}
+#page1:checked ~ .page1 {
+  display: flex;
+}
+#page1:checked ~ .btnlunbo2 > .btn1 {
+  background-color: #29b078;
+}
+#page2:checked ~ .page2 {
+  display: flex;
+}
+#page2:checked ~ .btnlunbo2 > .btn2 {
+  background-color: #29b078;
+}
+#page3:checked ~ .page3 {
+  display: flex;
+}
+#page3:checked ~ .btnlunbo2 > .btn3 {
+  background-color: #29b078;
+}
+.lunbo2 {
+  position: relative;
+}
+.btnlunbo2 {
+  width: 50px;
+  height: 13px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+.btnlunbo2 .btn1,
+.btnlunbo2 .btn2,
+.btnlunbo2 .btn3 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #5d5d5d;
+}

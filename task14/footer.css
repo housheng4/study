@@ -1,0 +1,155 @@
+.disf {
+  display: flex;
+}
+.flexjsa {
+  justify-content: space-around;
+}
+.flexja {
+  justify-content: center;
+}
+.flexsb {
+  display: flex;
+  justify-content: space-between;
+}
+.flexfcs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flexfc {
+  display: flex;
+  align-items: center;
+}
+.flexfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alignflexs {
+  align-items: flex-start;
+}
+.flexcol {
+  flex-direction: column;
+}
+.justflexend {
+  justify-content: flex-end;
+}
+.flexcolc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.disn {
+  display: none;
+}
+.disb {
+  display: block;
+}
+.disib {
+  display: inline-block;
+}
+.posa {
+  position: absolute;
+}
+.posr {
+  position: relative;
+}
+.posf {
+  position: fixed;
+}
+.borderbox {
+  box-sizing: border-box;
+}
+.visih {
+  visibility: hidden;
+}
+.visiv {
+  visibility: visible;
+}
+.textac {
+  text-align: center;
+}
+.fontbold {
+  font-weight: bolder;
+}
+.wordbreak {
+  word-break: break-all;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.floatl {
+  float: left;
+}
+.floatr {
+  float: right;
+}
+.footer {
+  background-color: #29b078;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0 18.75% 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .footcol a {
+  color: #fff;
+}
+.footer .footcol a:hover {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #fff;
+}
+.footer .footcol .footbox3,
+.footer .footcol .footbox4,
+.footer .footcol .footbox11 {
+  margin-top: 40px;
+}
+.footer .footcol .footbox7 {
+  margin-top: 66px;
+}
+.footer .footcol .footbox6,
+.footer .footcol .footbox8 {
+  margin-top: 24px;
+}
+.footer .footcol .footbox6 a,
+.footer .footcol .footbox8 a {
+  margin-right: 30px;
+}
+.footer .footcol .QRcode {
+  max-width: 85px;
+  vertical-align: top;
+}
+.ffootbox {
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #29b078;
+  border-top: 1px solid #32c086;
+  color: #fff;
+}
+@media all and (max-width: 1400px) {
+  .footer {
+    padding: 0 10% 35px;
+  }
+}
+@media all and (max-width: 760px) {
+  .footer {
+    padding: 0 3% 35px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer .footcol .footbox7,
+  .footer .footcol .footbox4,
+  .footer .footcol .footbox11 {
+    margin-top: 15px;
+  }
+}

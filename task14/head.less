@@ -1,0 +1,136 @@
+@import "./common.less";
+// 最上面
+.logo {
+    width: 2.6rem;
+    height: 2.6rem;
+    background-image: url(./image/css_sprites.png);
+}
+.toptop {
+    height: 40px;
+    background-color: #fff;
+    .flexfcs;
+    color: #29b078;
+    padding: 0 18.75%;
+    font-size: 1.4rem;
+    .toplogo {
+        width: 100px;
+        height: 40px;
+        .flexfcs;
+        .logo1 {
+            .logo;
+             background-position: -153px -9px;
+         }
+         .logo2 {
+             .logo;
+             background-position: -153px -54px;
+         }
+         .logo3 {
+             .logo;
+             background-position: -153px -98px;
+         }
+    }
+    
+}
+// 导航
+.navtop {
+    height: 10rem;
+    padding: 0 18.75%;   
+    background-color: #29b078;
+   .flexfc;
+   .justflexend;
+    // 左侧技能树图标
+    .jnlogodiv {
+        flex: 1;
+        .jnlogo {
+            max-width: 130px;
+            min-width: 80px;
+        }
+    }
+    // 右侧列表左移
+    .navcontent {
+        // width: 500px;
+        .disf;
+        margin-right: -34px;  
+        .a1 {
+            color: #fff;
+            .textac;
+            line-height: 100px;
+            width: 100px; 
+            .navtips {
+                height: 96px;
+                font-size: 1.6rem;
+            }
+            .border {
+                height: 4px;
+                background-color:#fff;
+                // .disn;
+                .visih;
+            }
+            &:hover .border {
+                // .disb;
+                .visiv;
+            }
+        }
+    }
+}
+.navchild {
+    .disn;
+}
+// 用复选框做下拉列表
+input {
+    .disn;
+}
+.navlogo {
+    .disn;
+    .posa;
+    top: 60px;
+    right: 3.3%;
+    img {
+        padding: 8px;
+        background-color: #47d197;
+        border-radius: 8px;
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+@media all and (max-width:1400px) {
+    .toptop, .navtop {
+        padding: 0 10%;
+    }
+}
+@media all and (max-width:760px) {
+    .toptop, .navtop {
+        padding: 0 3%;
+    }
+    .navright {
+        .disn;
+    }
+    input:checked ~ .navchild {
+        .disb;
+    }
+    .navlogo {
+        .disb;
+    }
+    .navchild {
+        ul {
+            margin: 0;
+            li {
+                height: 40px;
+                line-height: 40px;
+                .textac;
+                font-size: 1.6rem;
+                color: #fff;
+                background-color: #29b078;
+                cursor: pointer;
+                &:hover {
+                    background-color: #38c58a;
+                }
+            }
+        }
+    }
+}
+
+
+
+

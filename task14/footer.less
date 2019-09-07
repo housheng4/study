@@ -1,0 +1,58 @@
+@import "./common.less";
+.footer {
+    // height: 16rem;
+    background-color: #29b078;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0 18.75% 35px;
+    .flexfcs;
+    .footcol {
+        a {
+            color: #fff;
+            &:hover {
+                padding-bottom: 3px;
+                border-bottom: 2px solid #fff;
+            }
+        }
+        .footbox3, .footbox4, .footbox11 {
+            margin-top: 40px;
+        }
+        .footbox7 {
+            margin-top: 66px;
+        }
+        .footbox6, .footbox8 {
+            margin-top: 24px;
+            a {
+                margin-right: 30px;
+            }
+        }
+        .QRcode {
+            max-width: 85px;
+            vertical-align: top;
+        } 
+    }
+}
+.ffootbox {
+    font-size: 1.2rem;   
+    .textac;
+    background-color: #29b078;
+    border-top: 1px solid #32c086;
+    color: #fff;
+}
+@media all and (max-width:1400px) {
+    .footer {
+        padding: 0 10% 35px;
+    }
+}
+@media all and (max-width:760px) {
+    .footer {
+        padding: 0 3% 35px;
+        .flexcol;
+        .alignflexs;
+        .footcol {
+            .footbox7, .footbox4, .footbox11 {
+                margin-top: 15px;
+            }
+        }
+    }
+} 

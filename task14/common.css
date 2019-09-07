@@ -1,0 +1,95 @@
+.disf {
+  display: flex;
+}
+.flexjsa {
+  justify-content: space-around;
+}
+.flexja {
+  justify-content: center;
+}
+.flexsb {
+  display: flex;
+  justify-content: space-between;
+}
+.flexfcs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flexfc {
+  display: flex;
+  align-items: center;
+}
+.flexfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alignflexs {
+  align-items: flex-start;
+}
+.flexcol {
+  flex-direction: column;
+}
+.justflexend {
+  justify-content: flex-end;
+}
+.flexcolc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.disn {
+  display: none;
+}
+.disb {
+  display: block;
+}
+.disib {
+  display: inline-block;
+}
+.posa {
+  position: absolute;
+}
+.posr {
+  position: relative;
+}
+.posf {
+  position: fixed;
+}
+.borderbox {
+  box-sizing: border-box;
+}
+.visih {
+  visibility: hidden;
+}
+.visiv {
+  visibility: visible;
+}
+.textac {
+  text-align: center;
+}
+.fontbold {
+  font-weight: bolder;
+}
+.wordbreak {
+  word-break: break-all;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.floatl {
+  float: left;
+}
+.floatr {
+  float: right;
+}

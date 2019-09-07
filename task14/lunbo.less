@@ -1,0 +1,98 @@
+
+.viewport {
+    position: relative;
+    overflow: hidden;
+}
+.wrap {
+    position: relative;
+    width: 300vw;
+    overflow: hidden;  
+}
+.wrap img {
+    width: 100vw;
+    height: auto;
+    float: left;
+}
+// input选框关联图片，同时图片左移动
+#pic1:checked ~ .wrap {
+    left: 0;
+    transition: 0.5s linear;
+}
+// 按钮一背景白色出现
+#pic1:checked ~ .btnlunbo>.btn1 {
+    background-color: #fff;
+}
+#pic2:checked ~ .wrap {
+    left: -100vw;
+    transition: 0.5s linear;
+}
+// #pic2:checked ~ .btnlunbo>.btn1 {
+//     background:none;
+// }
+#pic2:checked ~ .btnlunbo>.btn2 {
+    background-color: #fff;
+}
+#pic3:checked ~ .wrap {
+    left: -200vw;
+    transition: 0.5s linear;
+}
+#pic3:checked ~ .btnlunbo>.btn3 {
+    background-color: #fff;
+}
+// 2d转换做一个箭头
+.arrow1 label {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    border-top: 1rem solid #7a7c87;
+    border-right: 1rem solid #7a7c87;
+    transform: rotate(-135deg);
+}
+// 箭头位置和关联的图片顺序
+#pic1:checked ~ .arrow1 label:nth-of-type(3),
+#pic2:checked ~ .arrow1 label:nth-of-type(1),
+#pic3:checked ~ .arrow1 label:nth-of-type(2) {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+}
+// 使用2d转换座一个箭头
+.arrow2 label {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    border-bottom: 1rem solid #7a7c87;
+    border-left: 1rem solid #7a7c87;
+    transform: rotate(-135deg);
+}
+// 箭头位置和关联的图片顺序
+#pic1:checked ~ .arrow2 label:nth-of-type(2),
+#pic2:checked ~ .arrow2 label:nth-of-type(3),
+#pic3:checked ~ .arrow2 label:nth-of-type(1) {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5rem;
+}
+input {
+    display: none;
+}
+.btnlunbo {
+    width: 70px;
+    height:20px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 99999;
+    top: 93%;
+    left: 50%;
+    margin-left: -35px;
+}
+.btn1, .btn2, .btn3 {
+    display: block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}

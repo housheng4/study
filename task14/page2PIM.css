@@ -1,0 +1,263 @@
+@import "../CSSreset.css";
+.disf {
+  display: flex;
+}
+.flexjsa {
+  justify-content: space-around;
+}
+.flexsb {
+  display: flex;
+  justify-content: space-between;
+}
+.flexfcs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flexfc {
+  display: flex;
+  align-items: center;
+}
+.flexfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alignflexs {
+  align-items: flex-start;
+}
+.flexcol {
+  flex-direction: column;
+}
+.justflexend {
+  justify-content: flex-end;
+}
+.flexcolc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.disn {
+  display: none;
+}
+.disb {
+  display: block;
+}
+.disib {
+  display: inline-block;
+}
+.posa {
+  position: absolute;
+}
+.posr {
+  position: relative;
+}
+.posf {
+  position: fixed;
+}
+.borderbox {
+  box-sizing: border-box;
+}
+.visih {
+  visibility: hidden;
+}
+.visiv {
+  visibility: visible;
+}
+.textac {
+  text-align: center;
+}
+.fontbold {
+  font-weight: bolder;
+}
+.wordbreak {
+  word-break: break-all;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.floatl {
+  float: left;
+}
+.floatr {
+  float: right;
+}
+html {
+  font-size: 62.5%;
+}
+.page2pim {
+  position: relative;
+}
+.page2pim:hover .yincang {
+  display: block;
+}
+.page2pim .yincang {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.8;
+  padding: 70px 40px 0;
+  display: none;
+}
+.page2pim .yincang p {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.page2pim .yincang .yincangp1 {
+  text-align: center;
+}
+.page2pim .yincang .yincangp2 {
+  text-indent: 2em;
+  margin-top: 35px;
+}
+.page2pim .pimbox1 {
+  box-sizing: border-box;
+  border: 1px solid #dadada;
+  border-bottom: none;
+  word-break: break-all;
+  padding: 10px;
+  zoom: 1;
+}
+.page2pim .pimbox1 .imgbox {
+  width: 39.5%;
+  height: 175px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page2pim .pimbox1 .imgbox img {
+  max-width: 100%;
+}
+.page2pim .pimbox1 .word1 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin-left: 42%;
+  margin-top: 30px;
+}
+.page2pim .pimbox1 .word2 {
+  font-size: 1.4rem;
+  margin-left: 42%;
+  margin-top: 15px;
+}
+.page2pim .pimbox1:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.page2pim .pimbox2 {
+  zoom: 1;
+}
+.page2pim .pimbox2 div {
+  padding: 10px;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 42px;
+  border: 1px solid #dadada;
+  display: flex;
+  align-items: center;
+}
+.page2pim .pimbox2 div:nth-child(1) {
+  border-right: none;
+  border-bottom: none;
+}
+.page2pim .pimbox2 div:nth-child(3) {
+  border-right: none;
+}
+.page2pim .pimbox2 div:nth-child(2) {
+  border-bottom: none;
+}
+.page2pim .pimbox2 div img {
+  padding-left: 10px;
+}
+.page2pim .pimbox2:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.page2pim .pimbox3 {
+  zoom: 1;
+}
+.page2pim .pimbox3 .aaa {
+  height: 105px;
+  width: 39.69%;
+  float: left;
+  border-bottom: 1px solid #dadada;
+  border-left: 1px solid #dadada;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page2pim .pimbox3 .bbb {
+  float: right;
+  width: 60.31%;
+  font-weight: bolder;
+}
+.page2pim .pimbox3 .bbb div {
+  height: 35px;
+  border-bottom: 1px solid #dadada;
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  padding: 0 5% 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.page2pim .pimbox3:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.page2pim .pimbox4,
+.page2pim .pimbox5 {
+  border: 1px solid #dadada;
+  border-top: none;
+  line-height: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.page2pim .pimbox4 {
+  font-size: 1.4rem;
+}
+.page2pim .redfont {
+  color: #f13123;
+}
+@media all and (max-width: 780px) {
+  .page2pim .pimbox1 .imgbox {
+    width: 100%;
+  }
+  .page2pim .pimbox1 .word1 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .page2pim .pimbox1 .word2 {
+    margin-left: 0;
+  }
+  .page2pim .pimbox2 div {
+    width: 100%;
+  }
+  .page2pim .pimbox2 div:nth-child(1) {
+    border-right: 1px solid #dadada;
+  }
+  .page2pim .pimbox2 div:nth-child(3) {
+    border-right: 1px solid #dadada;
+  }
+  .page2pim .pimbox2 div:nth-child(4) {
+    border-top: none;
+  }
+}
