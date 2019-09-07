@@ -5,6 +5,9 @@
 .flexjsa {
   justify-content: space-around;
 }
+.flexja {
+  justify-content: center;
+}
 .flexsb {
   display: flex;
   justify-content: space-between;
@@ -37,6 +40,9 @@
   display: flex;
   align-items: center;
 }
+.wrap {
+  flex-wrap: wrap;
+}
 .disn {
   display: none;
 }
@@ -66,6 +72,27 @@
 }
 .textac {
   text-align: center;
+}
+.fontbold {
+  font-weight: bolder;
+}
+.wordbreak {
+  word-break: break-all;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.floatl {
+  float: left;
+}
+.floatr {
+  float: right;
 }
 html {
   font-size: 62.5%;
@@ -252,7 +279,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   font-size: 1.4rem;
 }
 .page1line5 .all-link ul li a {

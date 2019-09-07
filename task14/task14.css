@@ -478,7 +478,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   font-size: 1.4rem;
 }
 .page1line5 .all-link ul li a {
