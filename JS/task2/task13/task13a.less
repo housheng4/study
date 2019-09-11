@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+@import "./head.less";
+@import "./body.less";
+@font1: 3.4rem;
+// @font1: 5.31vw;
+@font2: 2.4rem;
+@font3: 3.2rem;
+.fontcolor {
+    color: #9a9a9a;
+}
+.contentborder {
+    border: 1px solid #cecece;
+}
+.contentcolor {
+    background-color: #fff;
+}
+.fl {
+    float: left;
+}
+
+.leftlist {
+    // transition: all .5s ease-in-out .1s;
+    z-index: 99999;
+    .head-bgcolor;
+    width: 30%;
+    li {
+        
+        .flex-row-sb;
+        font-size: 25px;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 20px 0;
+        border-bottom: 2px solid #ccc;
+    }
+    display: none;
+}
+.mybody {
+    width: 70%;
+    flex: 1;
+    // transition: all .5s ease-in-out .1s;
+}
+.main {
+    display: flex;
+}
+
+.header {
+    .head-bgcolor;
+    .fontwhite;
+    .head-height;
+}
+.input1 {
+    display: none;
+}
+#ladong+label {
+    display: block;
+    .positiona;
+    left: 20px;
+    z-index: 99999;
+    width: 100px;
+    height: 80px;
+    background: url(./img/aaa.png) no-repeat center;
+    cursor: pointer;
+}
+#ladong:checked ~ nav.leftlist {
+    display: block;
+}
+#ladong:checked+label {
+    left: 30%;
+}
+// .main:hover nav.leftlist {
+//     background-color: red;
+// }
+
+.content {
+    .whitenowap;
+    padding: 27px 36px 62px;
+    // padding-left: 36px;
+    .body-bgcolor;
+    .lastgame {
+        font-size: @font1;
+        .flex-row-c;
+        height: 118px;
+        .fontcolor;
+        .contentcolor;
+        // margin-top: 27px;在这里使用margin为啥把content顶出来
+        .positionr;
+        img {
+            .positiona;
+            right: 14px;
+        }
+        .contentborder;
+    }
+    .game {
+        .positionr;
+        .flex-col-c;
+        .contentborder;
+        margin-top: 25px;
+        .contentcolor;
+        .gamename {
+            width: 100%;
+            height: 89px;
+            color: #fbb435;
+            border-bottom: 1px solid  #fbb435;
+            font-size: 3.7rem;
+            
+            .flex-row-c;
+            margin-bottom: 30px;
+        }
+        .easy {
+            width: 81.5%;
+            height: 136px;
+            .head-bgcolor;
+            .flex-row-c;
+            color: #fff;
+            font-size: @font3;
+            
+        }
+        .onlinenumber {
+            width: 100%;
+            height: 78px;
+            .flex-row-c;
+            font-size: @font2;
+            color: #787878;
+        }
+        .sanjiao {
+            .positiona;
+            right: 6px;
+            top: 380px;
+        }
+        .yuan {
+            .flex-row-c;
+            padding-bottom: 9px;
+            .yuana {
+                width: 15px;
+                height: 15px;
+                background-color: #cecece;
+                border-radius: 10px;
+                margin: 5px;
+                &:hover {
+                    background-color: #29bde0;
+                }
+                // box-shadow: 0 0 1px#29bde0;
+            }
+        }
+    }
+}
+
+
+@media all and(max-width:500px) {
+    html {
+        font-size: 30%;
+    }
+    .content>.game>.easy {
+        width: 70%;
+    }
+    ul>li {
+        flex-direction: column;
+    }
+    .leftlist {
+        width: 13%;
+    }
+    #ladong:checked+label {
+        left: 10%;
+    }
+}

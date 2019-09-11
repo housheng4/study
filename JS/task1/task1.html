@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js九宫格</title>
+    <style>
+        div {
+            width: 31%;
+            padding-top: 31%;
+            background-color: #FFA500;
+            border-radius: 10%;
+            margin: 1%;
+            float: left;
+            outline: none;
+            border: none;
+        }
+
+        button {
+            width: 100%;
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="changeColor()">改变颜色</button>
+    <button onclick="stopChange()">停止改变</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        var div = document.getElementsByTagName('div');
+        console.log(div);
+        var id;//必须得定义一个全局变量
+        function changeColor() {
+            var num = new Array();
+            for (var i = 0; i < 3; i++) {
+                var number = Math.floor(Math.random() * div.length);
+
+                if (num.indexOf(number) < 0) {
+                    num.push(number);
+                } else {
+                    i--;
+                }
+            }
+
+            for (let i = 0; i < div.length; i++) {
+                const element = div[i];
+                div[i].style.backgroundColor = 'rgb(251,180,53)';
+            }
+            var x1 = num[0];
+            var x2 = num[1];
+            var x3 = num[2];
+            div[x1].style.backgroundColor = color();
+            div[x2].style.backgroundColor = color();
+            div[x3].style.backgroundColor = color();
+            let a = div[x1].style.backgroundColor
+            let b = div[x2].style.backgroundColor
+            let c = div[x3].style.backgroundColor
+            if (a == b || a == c || b == c || a == 'rgb(251,180,53)' || b == 'rgb(251,180,53)' || c == 'rgb(251,180,53)') {
+                changeColor()
+            }
+            clearInterval(id);
+            id = window.setInterval(changeColor, 500);
+        }
+        function color() {
+            var colorDiff = new Array();
+            for (let i = 0; i < 3; i++) {
+                var number = Math.floor(Math.random() * 256);
+                if (number > 16) {
+                    colorDiff.push(number);
+                } else {
+                    i--;
+                }
+            }
+            var r = colorDiff[0];
+            var g = colorDiff[1];
+            var b = colorDiff[2];
+            return "rgb(" + r + ',' + g + ',' + b + ")";
+        }
+        function stopChange() {
+            window.clearInterval(id);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+// body
+.body-bgcolor {
+    background-color: #f0f0f0;
+}
+.outlinenone {
+    outline: none;
+}
+.btnnone {
+    .outlinenone;
+    border: none;
+}
+.textcenter {
+    text-align: center;
+}
+.flexc {
+    display: flex;
+    align-items: center;
+}
+.flex-row-c {
+    .flexc;
+    justify-content: center;
+}
+.flex-row-sb {
+    .flexc;
+    justify-content: space-between;
+}
+.flex-row-sa {
+    .flexc;
+    justify-content: space-around;
+}
+.flexju {
+    display: flex;
+    justify-content: center;
+}
+.flex-col {
+    .flexc;
+    flex-direction: column;
+}
+.flex-col-c {
+    .flex-col;
+    justify-content: center;
+}
+.flex-col-sb {
+    .flex-col-c;
+    justify-content: space-between;
+}
+.flex-col-sa {
+    .flex-col-c;
+    justify-content: space-around;
+}
+.fontwhite {
+    color: #fff;
+}
+.fontblack {
+    color: #000;
+}
+.whitenowap {
+    white-space: nowrap;
+}
+.clearselectstyle {
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+.overflowhidden{
+    overflow: hidden;
+}
+.overflowdian {
+    .overflowhidden;
+    .whitenowap;
+    text-overflow: ellipsis;
+}
+.overflowauto {
+    overflow: auto;
+}
+.cursor {
+    cursor: pointer;
+}
+
+// head
+
+.head-bgcolor {
+    background-color: #29bde0;
+}
+.fontwhite {
+    color: #fff;
+}
+.head-height {
+    height: 80px;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.positionr {
+    position: relative;
+}
+.positiona {
+    position: absolute;
+}
+.positionf {
+    position: fixed;
+}
+.clearfix {
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
+    zoom: 1; 
+}
