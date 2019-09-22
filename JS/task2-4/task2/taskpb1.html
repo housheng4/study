@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>玩家配比页</title>
+    <link rel="stylesheet" href="./taskpb.css">
+</head>
+<body onload="myLoad()">
+    <div class="header">
+        <img src="../image/return.png" alt="">
+    </div>
+    <div class="body">
+        <div class="line1">玩家配比</div>
+        <div class="line2">
+            <div><img src="" alt=""><span>杀手</span><span id="killer">&nbsp;&nbsp;</span><span>人</span></div>
+            <div><img src="" alt=""><span>平民</span><span id="pingMin">&nbsp;&nbsp;</span><span>人</span></div>
+        </div>
+        <div class="line3"></div>
+        <div class="line4">
+            <form action="taskck.html" method="POST" name="playerNum">
+                <span class="number1">请输入玩家数量</span>
+                <input id="inputNum"  type="text" oninput="change()" name="player" maxlength="2" >
+                <span class="number2">玩家数量为4-18</span>
+            </form>
+        </div>
+        <div class="line5">
+            <button onclick="tiShi()" type="submit">
+                去发牌
+            </button>
+        </div>
+    </div>
+    <script src="./taskpb1.js"></script>
+</body>
+</html>

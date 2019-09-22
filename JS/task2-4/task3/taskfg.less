@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #29bde0;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    width: 100vw;
+    height: 10.56vh;
+    line-height: 10.56vh;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    .returnimg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -22px;
+        padding:0 5%;
+        max-width: 100%;
+        cursor: pointer;
+    }
+    .closeimg {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -18px;
+        padding:0 5%;
+        max-width: 100%;
+    }
+    .title {
+        color: #fff;
+        font-size: 3rem;
+    }
+}
+.content {
+    height: 61vh;
+    padding-top: 10vw;
+    margin-top: 10.56vh;
+    margin-bottom: 10vh;
+    overflow: auto;
+    z-index: 2;
+    .box {
+        box-sizing: border-box;
+        border:1vw solid #fff;
+        width: 23vw;
+        height: 25vw;
+        margin-left: 4.6vw;
+        margin-right: 4.6vw;
+        margin-bottom: 10vw;
+        background-color: #fff;
+        float: left;
+        .div1 {
+            width: 100%;
+            height: 80%;
+            background: #f5c97b;
+            display: flex;
+            align-items: center;
+            justify-content: center;      
+            font-size: 2.5rem;
+        }
+        .div2 {
+            width: 100%;
+            height: 20%;
+            background-color: #83b09a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+
+.btn {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    position: fixed;
+    bottom: 0;
+    #beginBtn {
+        width: 75%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 10.56vh;
+  line-height: 10.56vh;
+  text-align: center;
+  background-color: #29bde0;
+}
+.header .returnimg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -22px;
+  padding: 0 5%;
+  max-width: 100%;
+  cursor: pointer;
+}
+.header .closeimg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -18px;
+  padding: 0 5%;
+  max-width: 100%;
+}
+.header .title {
+  color: #fff;
+  font-size: 3rem;
+}
+.main {
+  margin-top: 10.56vh;
+  margin-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+.main .titlea {
+  display: none;
+  width: 95%;
+  height: 5vh;
+  background-color: #fff;
+  color: #29bde0;
+  font-size: 2rem;
+  line-height: 5vh;
+  text-align: center;
+  border: 1px solid #c9c9c9;
+  box-sizing: border-box;
+}
+.main .line1 {
+  display: none;
+  width: 95%;
+  background-color: #fff;
+  position: relative;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border: 1px solid #c9c9c9;
+  padding: 30px;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+}
+.main .line1 .sanjiao {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+}
+.main .line1 .box {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.main .line1 .box .imgBox {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color: #fff;
+}
+.main .line1 .box .imgBox .moon {
+  width: 15px;
+}
+.main .line1 .box .imgBox .sun {
+  width: 20px;
+}
+.main .line1 .box .imgBoxx {
+  width: 30px;
+  height: 30px;
+}
+.main .line1 .box .sanjiao2 {
+  border: solid;
+  border-width: 5px 10px 5px 10px;
+  border-color: #fff #29bde0 #fff #fff;
+}
+.main .line1 .box .kill {
+  flex: 1;
+  color: #fff;
+  background-color: #29bde0;
+  text-align: center;
+}
+.main .line1 .result1 {
+  height: 20px;
+  margin-left: 52px;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #000;
+  margin-bottom: 18px;
+  display: none;
+}
+.main .line1 .result2 {
+  height: 20px;
+  margin-left: 52px;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #000;
+  margin-bottom: 18px;
+  display: none;
+}
+.main .line1 .verline {
+  width: 2px;
+  position: absolute;
+  top: 30px;
+  bottom: 18px;
+  left: 46px;
+  z-index: 1;
+  background-color: #000;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(41, 189, 224, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer button {
+  width: 40vw;
+  height: 60%;
+  background-color: orange;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

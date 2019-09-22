@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #29bde0;
+  width: 100%;
+  height: 100%;
+}
+.header {
+  width: 100vw;
+  height: 10.56vh;
+  line-height: 10.56vh;
+  text-align: center;
+  position: relative;
+}
+.header .returnimg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -22px;
+  padding: 0 5%;
+  max-width: 100%;
+  cursor: pointer;
+}
+.header .closeimg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -18px;
+  padding: 0 5%;
+  max-width: 100%;
+}
+.header .title {
+  color: #fff;
+  font-size: 3rem;
+}
+.content {
+  position: relative;
+  width: 70vw;
+  height: 50vh;
+  margin: 10vh auto;
+  background-color: #ffedc5;
+  border: 5px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content #orderNum {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f56b81;
+}
+.content #idImg {
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.content #idImg img {
+  max-width: 90%;
+}
+.content #idImg #idImgb {
+  position: absolute;
+  top: 35px;
+  max-width: 60%;
+  display: none;
+}
+.content #idImg #idImga {
+  max-height: 80%;
+}
+.content #identity {
+  position: absolute;
+  top: 87%;
+  font-size: 3rem;
+}
+.btn {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.btn #ckBtn {
+  width: 75%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 3rem;
+}
