@@ -23,6 +23,13 @@ header {
   z-index: 99999;
   background-color: #29bde0;
 }
+header .home {
+  position: absolute;
+  left: 10px;
+}
+header .home img {
+  max-width: 60%;
+}
 .line1 {
   width: 100%;
   margin-top: 10.6vh;
