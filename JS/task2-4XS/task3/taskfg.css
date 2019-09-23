@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #29bde0;
+}
+.header {
+  width: 100vw;
+  height: 10.56vh;
+  line-height: 10.56vh;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  background-color: #29bde0;
+  z-index: 99999;
+}
+.header .returnimg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -22px;
+  padding: 0 5%;
+  max-width: 100%;
+  cursor: pointer;
+}
+.header .closeimg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -18px;
+  padding: 0 5%;
+  max-width: 100%;
+}
+.header .title {
+  color: #fff;
+  font-size: 3rem;
+}
+.content {
+  padding-top: 1vw;
+  margin-top: 10.56vh;
+  margin-bottom: 10vh;
+  overflow: auto;
+  z-index: -1;
+}
+.content .box {
+  box-sizing: border-box;
+  border: 1vw solid #fff;
+  width: 23vw;
+  height: 25vw;
+  margin-left: 4.6vw;
+  margin-right: 4.6vw;
+  margin-bottom: 10vw;
+  background-color: #fff;
+  float: left;
+}
+.content .box .div1 {
+  width: 100%;
+  height: 80%;
+  background: #f5c97b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.content .box .div2 {
+  width: 100%;
+  height: 20%;
+  background-color: #83b09a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.content:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+#beginBtn {
+  position: fixed;
+  bottom: 0;
+  left: 12.5%;
+  width: 75%;
+  height: 10vh;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 3rem;
+}
