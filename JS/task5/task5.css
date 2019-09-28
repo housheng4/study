@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(mm.png);
+  background-size: cover;
+}
+body .box {
+  width: 40%;
+  height: 300px;
+  margin: 20% auto;
+  background-color: #c1c1c1;
+  font-size: 30px;
+  color: blue;
+  text-align: center;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+body .box form div {
+  background-color: #fff;
+  margin: 25px 15%;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+body .box form div img {
+  margin: 10px 10px;
+}
+body .box form div input {
+  cursor: pointer;
+  width: 100%;
+  font-size: 30px;
+  outline: none;
+  border: none;
+  border-left: 2px solid #c1c1c1;
+  padding-left: 10px;
+}
+body .box button {
+  width: 70%;
+  height: 40px;
+  background-color: blue;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
