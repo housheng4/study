@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>前端跨域解决方案</title>
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+    <style>
+        .float {
+            float: left;
+        }
+    </style>
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ?
+            'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+    </script>
+</head>
+
+<body>
+
+    <map name="pttmap">
+        <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank" />
+    </map>
+    <div class="reveal">
+        <div class="slides"
+            style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.756);">
+            <section style="top: 145.5px; display: block;" class="present">
+                <h3 style="text-transform:none">前端跨域问题有哪些解决方案？</h3><br><br>
+                 <h3>分享人：侯升</h3>
+            </section>
+            <section style="top: 264px; display: block;" class="future" hidden="" aria-hidden="true">
+                <ol>
+                    <p>&nbsp;&nbsp; &nbsp;目录</p>
+                    <li>背景介绍</li>
+                    <li>知识剖析</li>
+                    <li>常见问题</li>
+                    <li>解决方案</li>
+                    <li>编码实战</li>
+                    <li>扩展思考</li>
+                    <li>参考文献</li>
+                    <li>更多讨论</li>
+                </ol>
+            </section>
+            <!--1.背景介绍-->
+            <section style="top: 267px; display: block;" class="future" hidden="" aria-hidden="true">
+                <h3>一、背景介绍</h3>
+            </section>
+            <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden=""
+                aria-hidden="true">
+                <section style="top: 195px; display: none;" class="" aria-hidden="true">
+                    <p>什么是跨域</p>
+                    <p style="text-align: left;">一个域名的地址的组成包含：协议、子域名、主域名、端口号、请求资源地址</p>
+                    <p style="text-align: left;">JavaScript出于安全方面的考虑，不允许跨域调用其他页面的对象。那什么是跨域呢，简单地理解就是因为JavaScript同源策略的限制，
+                      a.com 域名下的js无法操作 b.com 或是 c.a.com 域名下的对象。当协议、子域名、主域名、端口号中任意一个不相同时，
+                      都算作不同域。不同域之间相互请求资源，就称为“跨域”</p> 
+                </section>
+              
+            </section>
+            <!--2.知识剖析-->
+            <section style="top: 267px; display: none;" class="future" hidden="" aria-hidden="true">
+                <h3>二、知识剖析</h3><br>
+            </section>
+            <!--2.1 JS有哪些数据类型？-->
+            <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden=""
+                aria-hidden="true">
+                <section style="top: 261px; display: none;text-align: left" class="future" hidden="" aria-hidden="true">
+                    2.1什么是同源策略及其限制
+                </section>
+                    <section style="top: 261px; display: none;text-align: left;line-height: 2.4rem" class="future" hidden="" aria-hidden="true">
+                        <p>同源策略/SOP（Same origin policy）是一种约定，由Netscape公司1995年引入浏览器，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。是浏览器安全的基石</p>
+                        <p>"同源"指的是"三个相同"：协议相同、域名相同、端口相同</p>
+                        <p>同源政策的目的:是为了保证用户信息的安全，防止恶意的网站窃取数据。</p>
+                        <p>如果非同源，共有三种行为受到限制。<br>
+                        （1） Cookie、LocalStorage 和 IndexDB 无法读取。<br>
+                        （2） DOM节点和JS对象无法获得。<br>
+                        （3） AJAX 请求不能发送。</p>
+                    </section>
+
+                    <section style="top: 261px; display: none;text-align: left" class="future" hidden="" aria-hidden="true">
+                        2.2同源策略的目的，又为什么需要跨域
+                    </section>
+                        <section style="top: 261px; display: none;text-align: left" class="future" hidden="" aria-hidden="true">
+                            <p>目的：同源策略保障了用户信息的安全，防止了恶意的网站窃取数据。</p>
+                            <p>既然有安全问题，那为什么又要跨域呢？ 这是因为有时公司内部有多个不同的子域，比如一个是location.company.com, 
+                                而应用是放在app.company.com, 这时想从app.company.com去访问location.company.com的资源就需要跨域来解决
+                                还有一种情况就是调用一些外部的API，也需要跨域</p>
+                    </section>
+                    <section style="top: 261px; display: none; text-align: left" class="future" hidden="" aria-hidden="true">
+                        2.3 常见跨域场景<br>
+                    </section>
+    
+                    <section style="top: 261px; display: none; text-align: left" class="future" hidden="" aria-hidden="true">
+                        <p>
+                            域名不同<br>
+                        www.jnshu.com 和www.itjnshu.com 
+                        </p><br>
+                        <p>
+                            二级域名相同，子域名不同<br>
+                        www.jnshu.it.com 和www.jinengshu.it.com 
+                        </p><br>
+                        <p>协议不同<br>
+                            http://www.jnshu.com 和 https://www.jnshu.com
+                        </p><br>
+                       <p>
+                        端口不同<br>
+                        www.jnshu.com:8888和www.jnshu.com:8080
+                       </p>
+
+
+                    </section>
+                    <section style="top: 261px; display: none; text-align: left" class="future" hidden="" aria-hidden="true">
+                        2.4 常见的允许跨域资源嵌入的实例<br>
+                    </section>
+
+                    <section style="top: 261px; display: none; text-align: left" class="future" hidden="" aria-hidden="true">
+                        <p>1 script标签允许跨域嵌入脚本，稍后介绍的JSONP就是利用这个“漏洞”来实现。<br>
+                            2 img标签、link标签、@font-face不受跨域影响。<br>
+                            3 video和audio嵌入的资源。<br>
+                            4 iframe载入的任何资源。（不是iframe之间的通信）<br>
+                            5 &lt;object&gt;、&lt;embed&gt;和&lt;applet&gt;的插件。<br>
+                            6 WebSocket不受同源策略的限制
+                        </p>
+                    </section>
+                    
+            </section>
+            <!--3.常见问题-->
+            <section style="top: 267px; display: none;" class="future" hidden="" aria-hidden="true">
+                <h3>三、常见问题</h3><br>
+                <p>前端垮域问题有哪些常用的解决方式？</p><br>
+                <p>注意：如果协议和端口造成的跨域问题前端没有办法解决</p>
+
+            </section>
+            <!--4.解决方案-->
+            <section style="top: 284px; display: none;" class="future" hidden="" aria-hidden="true">
+                <h3>四、解决方案</h3>
+            </section>
+            <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden=""
+            aria-hidden="true">
+            <section style="top: 267px; display: none;text-align: left" class="future" hidden="" aria-hidden="true">
+                <h3>Nginx反向代理</h3>
+                <p style="text-align: left;text-indent: 2em;">
+                        基础思想很简单，将你的服务器配置成需要跨域获取的资源的反向代理服务器。
+                        我们只需要配置nginx，在一个服务器上配置多个前缀来转发http/https请求到多个真实的服务器即可。这样，这个服务器上
+                        所有url都是相同的域名、协议和端口。因此，对于浏览器来说，这些url都是同源的，没有跨域限制。而实际上，这些url
+                        实际上由物理服务器提供服务。这些服务器内的javascript可以跨域调用所有这些服务器上的url。</p>
+            </section>
+            <section style="top: 267px; display: none;text-align: left" class="future" hidden="" aria-hidden="true">
+                <h3>通过jsonp跨域</h3>
+                <p style="text-align: left;text-indent: 2em;">
+                        JSONP是JSON with Padding（填充式JSON）的简写，是应用JSON的一种新方法，只不过是被包含在函数调用中的JSON。
+                        
+                </p>
+                <p style="text-align: left;text-indent: 2em;">
+                        它的基本思想是，网页通过添加一个&lt;script&gt;元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到
+                        请求后将数据放在一个指定名字的回调函数里传回来。
+                </p>
+            </section>
+            <section style="top: 267px; display: none;text-align: left" class="future" hidden="" aria-hidden="true">
+                <h3>WebSocket</h3>
+                    <p style="text-align: left;text-indent: 2em;">
+                            Websocket 是 HTML5 的一个持久化的协议，它实现了浏览器与服务器的全双工通信，同时也是跨域的一种解决方案。
+                            WebSocket 和 HTTP 都是应用层协议，都基于 TCP 协议
+                            使用ws://（非加密）和wss://（加密）作为协议前缀。该协议不实行同源政策，只要服务器支持，就可以通过它进行跨源通信。
+                </p>
+            </section>
+            <section style="top: 267px; display: none;text-align: left" class="future" hidden="" aria-hidden="true">
+                <h3>CORS</h3>
+                    <p style="text-align: left;text-indent: 2em; word-break: break-all;">
+                            CORS是跨源资源分享（Cross-Origin Resource Sharing）的缩写。它是W3C标准，是跨源AJAX请求的根本解决方法。
+                            整个 CORS 通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS 通信与同源的 AJAX 通信没有差别，代码完全一样。
+                            浏览器一旦发现 AJAX 请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。
+                            因此，实现 CORS 通信的关键是服务器。只要服务器实现了 CORS 接口，就可以跨源通信。
+                    </p>
+            </section>
+            </section>
+            <!--5.编码实战-->
+            <section style="top: 267px; display: none;" class="future" hidden="" aria-hidden="true">
+                <h3>五.编码实战</h3>
+            </section>
+
+            
+            <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden=""
+            aria-hidden="true">
+            <!--6.拓展思考-->
+            <section style="top: 267px; display: none;" class="future" hidden="" aria-hidden="true">
+                <h3>六.拓展思考</h3>
+            </section>
+                <section style="top: 261px; display: none;text-align: center" class="future" hidden="" aria-hidden="true">
+                    <h3>各个跨域方法的不同之处及优缺点</h3>
+                </section>
+                <section style="top: 261px; display: none; text-align: left" class="future" hidden="" aria-hidden="true">
+                    <p>JSONP的主要优势在于对浏览器的支持较好；CORS需要浏览器和服务器同时支持，虽然目前主流浏览器支持CORS，但IE10以下不支持CORS。</p>
+                    <p> JSONP的不足之处：只能使用get方法，不能使用post方法，script，link, img 等等标签引入外部资源，都是 get 请求的</p>
+                    <p>没有关于 JSONP 调用的错误处理。如果动态脚本插入有效，就执行调用；如果无效，就静默失败。失败是没有任何提示的</p>                   
+                    <p>CORS支持所有类型的HTTP请求。使用CORS，开发者可以使用普通的XMLHttpRequest发起请求和获得数据，比起JSONP有更好的错误处理</p>
+                </section>
+                <section style="top: 261px; display: none; text-align: left" class="future" hidden="" aria-hidden="true">
+                    <h4>其他的一些跨域方法</h4>
+                    <p>html5的postMessage：一个html5所提供的一个API，ie8以前不支持</p>
+                    <p>使用window.name来进行跨域</p>
+                    <p>location.hash + iframe 解决跨域</p>
+                </section>
+            </section>
+            <section style="top: 267px; display: none;" class="future" hidden="" aria-hidden="true">
+                <h3>7.参考文献</h3>
+            </section>
+            <section style="top: 195px; display: none;" class="future" hidden="" aria-hidden="true">
+                <a href="https://github.com/happylindz/blog/issues/3">跨域，你需要知道的全在这里-github</a><br>
+                <a href="https://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html">浏览器同源政策及其规避方法-阮一峰</a><br>
+                <a href="https://www.jianshu.com/p/9496961abb5e">跨域资料整理-简书</a><br>
+                <a href="https://github.com/wengjq/Blog/issues/2">前端跨域问题及解决方案-github</a>
+                </section>
+            <section style="top: 267px; display: none;" class="future" hidden="" aria-hidden="true">
+                <h3>8.更多讨论</h3>
+            </section>
+            <section style="top: 284px; display: none;" class="future" hidden="" aria-hidden="true">
+                Angular2+中如何配置跨域
+            </section>
+            <section style="top: 208.5px; display: none;" class="future" hidden="" aria-hidden="true">
+                <br><br><br><br>
+                <h4>鸣谢</h4>
+                <p style="text-align: center"><b>今天的分享就到这里啦，欢迎大家点赞、转发、留言、拍砖~</b>
+                </p><br><br><br><br>
+                <p style="text-align: right"><small>BY : 侯升</small>
+                </p>
+            </section>
+        </div>
+    </div>
+    <script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+    <script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+    <script>
+        // 以下为常见配置属性的默认值
+        // {
+        //  controls: true, // 是否在右下角展示控制条
+        //  progress: true, // 是否显示演示的进度条
+        //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+        //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+        //  keyboard: true, // 是否启用键盘快捷键来导航
+        //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+        //  center: true, // 是否将幻灯片垂直居中
+        //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+        //  loop: false, // 是否循环演示
+        //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+        //  fragments: true, // 全局开启和关闭碎片。
+        //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+        //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+        //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+        //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+        // }
+        // 初始化幻灯片
+        Reveal.initialize({
+            history: true,
+            dependencies: [{
+                src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js'
+            },
+            {
+                src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js'
+            },
+            {
+                src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js',
+                async: true
+            },
+            {
+                src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js',
+                async: true,
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+            ]
+        });
+    </script>
+</body>
+
+</html>
