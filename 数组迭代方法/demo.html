@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        设定一个使用场景这里有一堆土豆，如果换成代码，可以表示如下：<br>
+        var potatos = <br>
+        [{ id: '1001', weight: 50 },<br>
+        { id: '1002', weight: 80 },<br>
+        { id: '1003', weight: 120 },<br>
+        { id: '1004', weight: 40 },<br>
+        { id: '1005', weight: 110 },<br>
+        { id: '1006', weight: 60 }]<br>
+    </p>
+    <p>重量（g）记录成一个数组<br>
+        var w = [50, 80, 120, 40, 110, 60]</p>
+</body>
+
+</html>
+
+<script>
+    var potatos = [{
+            id: '1001',
+            weight: 50
+        },
+        {
+            id: '1002',
+            weight: 80
+        },
+        {
+            id: '1003',
+            weight: 120
+        },
+        {
+            id: '1004',
+            weight: 40
+        },
+        {
+            id: '1005',
+            weight: 110
+        },
+        {
+            id: '1006',
+            weight: 60
+        }
+    ]
+
+    var w = [50, 80, 120, 40, 110, 60]
+
+
+    // 农民：我要催熟（批量操作）使用forEach()
+    // potatos.forEach(potato => {
+    //     potato.weight += 20
+    // })
+    // console.log("forEach()每个重量都加20", potatos)
+
+
+    // map方法说：我也可以！
+    // potatos.map(potato => {
+    //     potato.weight += 20
+    // })
+    // console.log("map()每个重量都加20", potatos)
+
+
+    // map补充了一句，我还可以把重量统计表格，更新出一份新的给你
+    // w = potatos.map(potato => {
+    //     return potato.weight += 20
+    // })
+    // console.log("重量加20并列出重量", w);
+
+
+    // forEach和map的最大区别就在于， forEach没有返回值。
+    // 即便你给forEach加上return也没用
+    // w = potatos.forEach(potato => {
+    //     return potato.weight += 20
+    // })
+    // console.log(w);
+
+
+    // 问：你这有没有大的啊（some()判断有没有符合条件的）
+    // var hasbig = potatos.some(potato => {
+    //     return potato.weight > 100
+    // })
+    // console.log("判断有没有重量大于100的土豆", hasbig);
+
+
+    // 问：难道全都是大的吗（every()判断是否全部符合条件）
+    // var allbig = potatos.every(potato => {
+    //     return potato.weight > 100
+    // })
+    // console.log("判断是不是全部的重量都大于100", allbig);
+
+
+    // 老板：给我看看都有多少大土豆（filter()筛选过滤重量大于100的土豆）
+    // var bigOnes = potatos.filter(potato => {
+    //     return potato.weight > 100
+    // })
+    // // 返回一个新的对象数组，并不会改变原数组
+    // console.log("筛选重量大于100的土豆", bigOnes);
+
+
+    // 顾客：给我个大土豆（find()返回一个符合的）
+    // var big = potatos.find(potato => {
+    //     return potato.weight > 100
+    // })
+    // console.log("顾客拿到的大土豆",big);
+
+
+    // 收银员：这土豆是仓库的第几个来着（findIndex()返回序号）
+    // var i = potatos.findIndex(potato => {
+    //     return potato.weight > 100
+    // })
+    // console.log('顾客的大土豆在仓库哪里放着', '数组下标是' + i, '第' + (i + 1) + '个');
+    // findIndex返回第一个符合条件的索引号
+
+
+
+    // 老板问：今年收成如何呀（所有的重量的和：递归累加）
+    // var sum = w.reduce((sum, w) => {
+    //     return w + sum
+    // }, 0)
+    // console.log("总重量",sum);
+
+    var sum = potatos.reduce((sum, p) => {
+        return p.weight + sum
+    }, 0)
+    console.log("另一种写法",sum);
+</script>
