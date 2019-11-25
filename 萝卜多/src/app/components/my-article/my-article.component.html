@@ -1,0 +1,113 @@
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
+  <div nz-row [nzGutter]="24">
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="8">
+      <nz-form-item nzFlex>
+        <nz-form-label nz-col [nzSpan]="8" style="text-align: left;">发布时间</nz-form-label>
+        <nz-form-control nz-col [nzSpan]="16">
+          <nz-date-picker [nzDisabledDate]="disabledStartDate" formControlName="startAt"
+            (ngModelChange)="onStartChange($event)">
+          </nz-date-picker>
+
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="8">
+      <nz-form-item nzFlex>
+        <nz-form-label nz-col [nzSpan]="8" style="text-align: left;">更新时间</nz-form-label>
+        <nz-form-control nz-col [nzSpan]="16">
+          <nz-date-picker formControlName="endAt" [nzDisabledDate]="disabledEndDate"
+            (ngModelChange)="onEndChange($event)"></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="8">
+      <nz-form-item nzFlex>
+        <nz-form-label nz-col [nzSpan]="8" style="text-align: left;">类型</nz-form-label>
+        <nz-form-control nz-col [nzSpan]="16">
+          <nz-select nzShowSearch nzAllowClear nzPlaceHolder="全部" formControlName="type">
+            <nz-option nzValue="" nzLabel="全部"></nz-option>
+            <nz-option nzValue="0" nzLabel="首页Banner"></nz-option>
+            <nz-option nzValue="1" nzLabel="找职位Banner"></nz-option>
+            <nz-option nzValue="2" nzLabel="找精英Banner"></nz-option>
+            <nz-option nzValue="3" nzLabel="行业大图"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="8">
+      <nz-form-item nzFlex>
+        <nz-form-label nz-col [nzSpan]="8" style="text-align: left;">状态</nz-form-label>
+        <nz-form-control nz-col [nzSpan]="16">
+          <nz-select nzShowSearch nzAllowClear nzPlaceHolder="全部" formControlName="status">
+            <nz-option nzValue="" nzLabel="全部"></nz-option>
+            <nz-option nzValue="2" nzLabel="上线"></nz-option>
+            <nz-option nzValue="1" nzLabel="草稿"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row>
+    <div nz-col [nzSpan]="24" style="text-align: right;">
+      <button nz-button (click)="reset()" nzType="danger" style="margin-right: 10px;">清空</button>
+      <button nz-button [nzType]="'primary'" (click)="search()" class="mg_r_10">搜索</button>
+    </div>
+  </div>
+</form>
+<div class="table" *ngIf="listData" style="margin-top: 30px;">
+  <div class="panel-heading">
+    <strong>Article列表</strong>
+    <button class="btn btn-success" [routerLink]="['/home/addarticle']" [queryParams]="{id:0}">+新增</button>
+  </div>
+  <!-- <nz-table #nzTable [nzData]="List"
+      [nzBordered]="true" [nzFrontPagination]="false" [nzLoading]="loading"
+      [nzTotal]="total"
+      [nzPageIndex]="params.page"
+      (nzPageIndexChange)="page($event)"
+      (nzPageSizeChange)="pageSize($event)"
+      [nzPageSize]="params.size"
+      nzShowQuickJumper
+      [nzShowSizeChanger]="true"
+      [nzPageSizeOptions]= "[10,20,30]"> -->
+  <nz-table [nzData]="listData" [nzBordered]="true" [nzFrontPagination]="false" [nzLoading]="loading"
+    [nzTotal]="params.total" [(nzPageIndex)]="params.page" [(nzPageSize)]="params.size" nzShowSizeChanger
+    (nzPageSizeChange)="sizing($event)" [nzPageSizeOptions]=[10,20,30] (nzPageIndexChange)="paging($event)"
+    [nzShowQuickJumper]='true'>
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>ID</th>
+        <th>图片</th>
+        <th>名称</th>
+        <th>类型</th>
+        <th>发布时间</th>
+        <th>修改时间</th>
+        <th>发布者</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listData; let x = index">
+        <td>{{x +1}}</td>
+        <td>{{item.id}}</td>
+        <td><img src="{{item.img}}" alt=""></td>
+        <td>{{item.title}}</td>
+        <td>{{item.type | strLength}}</td>
+        <td>{{item.createAt| date:'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td>{{item.updateAt| date:'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td>{{item.author}}</td>
+        <td>{{item.status | strLengthstatus}}</td>
+        <td> <button nzSize="small" nz-popconfirm nzTitle="{{item.status===2?'确定修改状态嘛?':'确定修改状态嘛?'}}"
+            (nzOnConfirm)="state(item.id,item.status==1?2:1)" nzPlacement="bottom" nz-button
+            nzType="primary">{{item.status==2?'草稿':'上线'}}</button>
+          <button nzSize="small" (click)="eidt(item.id,item.status)" nz-button nzType="default">编辑</button>
+          <button nzSize="small" nz-popconfirm nzTitle="{{item.status===1?'确定删除吗?':'确定删除吗?'}}"
+            (nzOnConfirm)="delData(item.id,item.status)" nzPlacement="bottom" nz-button nzType="danger">删除</button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

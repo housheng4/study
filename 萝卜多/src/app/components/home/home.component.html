@@ -1,0 +1,63 @@
+<input type="checkbox" name="xiala" id="xiala">
+<nav class="top-nav">
+    <div class="top-nav-left">
+        <span>萝卜多后台管理系统</span>
+    
+    </div>
+        <button  class="navbar-toggle navbar-toggle-button">
+            <label for="xiala">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </label>
+        </button>
+    <div class="top-nav-right">
+        <div class="top-nav-right-content">
+            <a >管理员</a><span>|</span>
+            <a >admin</a><span>|</span>
+            <a (click)="Exit()"><span class="glyphicon glyphicon-off"></span></a>
+        </div>
+    </div>
+</nav>
+<div class="left-list" id="leftList">
+    <ul class="left-first">
+        <li>
+            <div (click)="onClick1()" style="cursor: pointer;">
+                <i class="fa  fa-pencil"></i>
+                <span>后台管理</span>
+                <span class="fa  arrow"></span>
+            </div>
+            <ul class="left-second" [hidden]="isHidden1">
+                <li><a>模块管理</a></li>
+                <li><a>角色管理</a></li>
+                <li><a>密码修改</a></li>
+                <li><a>账户管理</a></li>
+            </ul>
+        </li>
+        <li>
+            <div (click)="onClick2()" style="cursor: pointer;">
+                <i class="fa  fa-pencil"></i>
+                <span>信息管理</span>
+                <span class="fa  arrow"></span>
+            </div>
+            <ul class="left-second" [hidden]="isHidden2">
+                <li><a>公司列表</a></li>
+                <li><a>职位列表</a></li>
+            </ul>
+        </li>
+        <li>
+            <div (click)="onClick3()" style="cursor: pointer;">
+            <i class="fa  fa-pencil"></i>
+                <span>内容管理</span>
+                <span class="fa  arrow"></span>
+            </div>
+            <ul class="left-second" [hidden]="isHidden3">
+                <li><a routerLink="/home/article" routerLinkActive="active">Article列表</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

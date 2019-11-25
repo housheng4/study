@@ -1,0 +1,86 @@
+<form nz-form [formGroup]="validateForm" style="border: 1px solid #ececec;border-radius: 5px; padding-bottom: 100px;">
+  <nz-page-header style="background: #ececec; font-weight: bolder; padding: 10px 15px;" nzTitle="{{text}}">
+  </nz-page-header>
+  <nz-form-item>
+    <br>
+    <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired>标题</nz-form-label>
+    <nz-form-control [nzSm]="8" [nzXs]="24">
+      <input nz-input formControlName="title" />
+      <!-- <nz-form-explain style="color: red;" *ngIf="!validateForm.get('title')?.value">
+                </nz-form-explain> -->
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label nzSpan="4" nzRequired>类型</nz-form-label>
+    <nz-form-control [nzSm]="4" [nzXs]="24" nzSpan="6">
+      <nz-select [(ngModel)]="type" nzShowSearch nzAllowClear formControlName="type" nzPlaceHolder="请选择"
+        (ngModelChange)="idsty($event)">
+        <!-- <nz-option nzValue="" nzLabel="请选择"></nz-option> -->
+        <nz-option nzValue="0" nzLabel="首页banner"></nz-option>
+        <nz-option nzValue="1" nzLabel="找职位banner"></nz-option>
+        <nz-option nzValue="2" nzLabel="找精英banner"></nz-option>
+        <nz-option nzValue="3" nzLabel="行业大图"></nz-option>
+      </nz-select>
+    </nz-form-control>
+    <nz-form-control [nzSm]="4" [nzXs]="24" nzSpan="6" *ngIf="type == 3">
+      <nz-select [(ngModel)]="industry" nzShowSearch nzAllowClear formControlName="industry" nzPlaceHolder="请选择">
+        <!-- <nz-option nzValue="" nzLabel="请选择"></nz-option> -->
+        <nz-option nzValue="0" nzLabel="移动互联网"></nz-option>
+        <nz-option nzValue="1" nzLabel="电子商务"></nz-option>
+        <nz-option nzValue="2" nzLabel="企业服务"></nz-option>
+        <nz-option nzValue="3" nzLabel="O2O"></nz-option>
+        <nz-option nzValue="4" nzLabel="教育"></nz-option>
+        <nz-option nzValue="5" nzLabel="金融"></nz-option>
+        <nz-option nzValue="6" nzLabel="游戏"></nz-option>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="4" [nzXs]="24">说明</nz-form-label>
+    <nz-form-control [nzSm]="8" [nzXs]="24">
+      <input nz-input formControlName="content" />
+    </nz-form-control>
+
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired>跳转链接</nz-form-label>
+    <nz-form-control [nzSm]="8" [nzXs]="24">
+      <input nz-input formControlName="url" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item style="width: 0;height: 0;opacity: 0;">
+    <nz-form-control>
+      <input nz-input formControlName="required" [(ngModel)]="required" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired>配图</nz-form-label>
+    <nz-form-control [nzSm]="8" [nzXs]="24">
+
+      <div class="clearfix">
+        <nz-upload nzAction="/a/u/img/task" nzListType="picture-card" [(nzFileList)]="imgList.img"
+          [nzShowButton]="imgList.img.length < 1" [nzPreview]="handlePreview" (nzChange)='change($event)' #list>
+          <i nz-icon nzType="plus"></i>
+          <div class="ant-upload-text">Upload</div>
+        </nz-upload>
+        <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null"
+          (nzOnCancel)="previewVisible = false">
+          <ng-template #modalContent>
+            <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+          </ng-template>
+        </nz-modal>
+      </div>
+    </nz-form-control>
+  </nz-form-item>
+  <div>
+    <button nzType='primary' [disabled]="!validateForm.valid" nz-button style="margin-left: 20%;" (click)="submitForm()"
+      class="pull-left">立即上线</button>
+    <button nzType='primary' [disabled]="!validateForm.valid" nz-button style="margin-left: 20px;" class="pull-left"
+      (click)="submitForm2()">存为草稿</button>
+    <button nzType='default' (click)="back()" nz-button style="margin-left: 20px;">取消</button>
+  </div>
+</form>

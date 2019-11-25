@@ -1,0 +1,6 @@
+.wrapper {
+  background: url(../assets/image/bg.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 100vh;
+}

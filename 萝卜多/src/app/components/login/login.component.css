@@ -1,0 +1,21 @@
+.content {
+  width: 100%;
+  height: 100%;
+  padding-top: 30vh;
+}
+.content form {
+  padding: 20px;
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #fff, 5px -5px 5px #fff, -5px 5px 5px #fff, -5px -5px 5px #fff;
+  margin: 0 auto;
+}
+.login-form {
+  max-width: 300px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
